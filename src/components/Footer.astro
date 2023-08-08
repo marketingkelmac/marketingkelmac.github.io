@@ -8,7 +8,7 @@ import navLinks from "../data/navLinks";
     <div class="logo">
       <a href="/">
         <svg
-          width="10rem"
+          width="15rem"
           viewBox="0 0 949 455"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -144,11 +144,19 @@ import navLinks from "../data/navLinks";
       </ul>
     </div>
   </div>
-  <ul class="bottom">
-    <li><a href="#">Privacy Statement</a></li>
-    <li><a href="#">Terms of Use</a></li>
-    <li><a href="#">Terms & Conditions</a></li>
-  </ul>
+  <div class="bottom">
+    <p>&copy; 2023 All Rights Reserved</p>
+    <ul>
+      <li><a href="#">Privacy Statement</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+    <p>
+      Website developed and maintained by <a
+        target="_blank"
+        href="https://www.linkedin.com/in/allan-raj/">Allan Raj</a>
+    </p>
+  </div>
 </footer>
 
 <style>
@@ -171,7 +179,11 @@ import navLinks from "../data/navLinks";
     font-weight: 700;
   }
 
-  .quick-links li {
+  .quick-links {
+    columns: 2;
+  }
+
+  .quick-links li:not(:first-child) {
     margin-top: 0.5em;
   }
 
@@ -191,15 +203,26 @@ import navLinks from "../data/navLinks";
 
   .bottom {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    font-size: var(--step--2);
+    color: var(--neutral-400);
+    gap: 1rem;
     max-width: 75rem;
     margin-inline: auto;
     padding: 1rem;
   }
 
+  .bottom p {
+    margin-bottom: 0;
+  }
+
+  .bottom ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
   .bottom a {
-    font-size: var(--step--2);
     display: inline-block;
     line-height: 1.2;
   }
@@ -213,8 +236,15 @@ import navLinks from "../data/navLinks";
     }
 
     .bottom {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bottom ul {
       justify-content: space-between;
-      gap: 0.5em;
+      text-align: center;
+      gap: 2em;
     }
   }
 </style>

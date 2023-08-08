@@ -44,7 +44,7 @@ import Button from "./Button.astro";
     background-color: var(--neutral-100);
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 600ms ease-in-out;
+    transition: transform 600ms ease-in 0.2s;
     perspective: 200px;
     width: 20rem;
     min-height: 28rem;
@@ -55,6 +55,10 @@ import Button from "./Button.astro";
   .back h5 {
     color: var(--blue-700);
     margin-bottom: 0;
+  }
+
+  h3.name {
+    margin-bottom: 0.5em;
   }
 
   .front div {
@@ -83,6 +87,10 @@ import Button from "./Button.astro";
 
   .card:hover .service-card {
     transform: rotateY(180deg);
+    transition: transform 200ms ease-in-out 0s;
+  }
+
+  .card:hover {
   }
 </style>
 
