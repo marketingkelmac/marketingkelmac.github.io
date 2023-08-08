@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+const { cardImage, imgAlt = "", cardName, cardDesc, cardList } = Astro.props;
+---
+
+<div class="card">
+  <div class="front">
+    <Image
+      src={`/assets/images/${cardImage}`}
+      alt={imgAlt}
+      width={400}
+      height={200}
+      format="webp"
+    />
+    <div>
+      <h3 class="h5 name">{cardName}</h3>
+      <p>{cardDesc}</p>
+    </div>
+  </div>
+  <div class="back">
+    <h4 class="h5 name">
+      {cardName}
+    </h4>
+    <p>Included Services</p>
+    <h5 class="h6">Dedicated Consultant Team</h5>
+
+    <div set:html={cardList} />
+  </div>
+</div>
+
+<style>
+  .card {
+    background-color: var(--neutral-100);
+    color: var(--blue-700);
+    width: 25rem;
+    height: 30rem;
+    position: relative;
+  }
+
+  h3.name,
+  .back h4.name,
+  .back h5 {
+    color: var(--blue-700);
+  }
+
+  .front div {
+    padding: 1rem;
+  }
+
+  .back {
+    padding: 1rem;
+    background-color: beige;
+    transform: rotateY(-180deg);
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    inset: 0;
+  }
+</style>

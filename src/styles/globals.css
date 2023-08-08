@@ -1,0 +1,144 @@
+:root {
+  --blue-700: #182e4b;
+  --blue-500: #234572;
+  --blue-400: #6297da;
+  --blue-100: #e0edff;
+  --neutral-700: #231f20;
+  --neutral-400: #626366;
+  --neutral-100: #e5eaf0;
+  --k-yellow: #f1cf1d;
+  --k-red: #e21936;
+
+  --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem);
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+  --step-2: clamp(1.62rem, calc(1.5rem + 0.58vw), 1.95rem);
+  --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --step-5: clamp(2.8rem, calc(2.45rem + 1.77vw), 3.82rem);
+
+  --m-width: 75rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.h1-lg {
+  font-size: clamp(2.63rem, calc(1.97rem + 3.26vw), 4.5rem);
+}
+
+.h1 {
+  font-size: var(--step-5);
+}
+
+.h2 {
+  font-size: var(--step-4);
+}
+
+.h3 {
+  font-size: var(--step-3);
+}
+
+.h4 {
+  font-size: var(--step-2);
+}
+
+.h5 {
+  font-size: var(--step-1);
+}
+
+.h6 {
+  font-size: var(--step-0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--blue-700);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: var(--neutral-100);
+}
+a {
+  text-decoration: none;
+  color: var(--blue-500);
+  transition: color 250ms ease-in-out;
+}
+
+a:hover {
+  color: var(--blue-400);
+}
+
+.container {
+  max-width: var(--m-width);
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.dark {
+  background-color: var(--blue-700);
+  color: var(--neutral-100);
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.hero-p {
+  font-size: clamp(1rem, calc(0.78rem + 1.09vw), 1.63rem);
+  margin-bottom: 2rem;
+}
+
+section {
+  padding-block: 5rem;
+}
+
+.card.hide {
+  display: none;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.two-even {
+  grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 60rem) {
+  .grid.two-even {
+    grid-template-columns: 1fr;
+  }
+
+  img.no-mobile {
+    display: none;
+  }
+}

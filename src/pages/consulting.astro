@@ -1,0 +1,124 @@
+---
+import Container from "../components/Container.astro";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ServicesCard from "../components/ServicesCard.astro";
+import ServiceModelCard from "../components/ServiceModelCard.astro";
+const serviceModels = await Astro.glob("../content/consulting/*.md");
+---
+
+<Layout title="Kelamc Group | Consulting">
+  <Container isDark classes="hero hero-consult" background="home-bg.jpg">
+    <h1 class="h1-lg text-c">Consulting</h1>
+    <p class="hero-p">
+      The time and effort required to attain and maintain an ISO management
+      system and product certification can bring you so much more than simple
+      compliance with regulatory and customer requirements. Innovation and
+      competitive advantage can and should be the corporation’s target.
+    </p>
+    <a class="text-c" href="/contact-us">
+      <Button theme="blue-400" size="lg">Contact Us</Button>
+    </a>
+  </Container>
+  <Container>
+    <div class="grid two-even">
+      <div>
+        <h2 class="h2">Consulting Services We Provide</h2>
+        <p>
+          Experience, insight, and leadership, along with corporate commitment,
+          are required to advance your corporation to new levels of performance
+          and competitiveness. The Kelmac Group® can help to customize your
+          business processes, equip your people with the capabilities and
+          organizational culture needed to transform your organization’s
+          performance, and sustain the gains associated with a conforming and
+          compliance management system and product certification.
+        </p>
+      </div>
+      <Image
+        src="/assets/images/consulting-1.png"
+        class="no-mobile"
+        width={600}
+        height={400}
+        alt="A consulting guiding a company"
+        format="webp"
+      />
+    </div>
+    <div class="card-container">
+      <ServicesCard
+        cardImage="con-ser-1.png"
+        cardName="ISO Certification Management Systems"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+      <ServicesCard
+        cardImage="con-ser-2.png"
+        cardName="Regulatory Compliance Systems"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+      <ServicesCard
+        cardImage="con-ser-3.png"
+        cardName="Strategic Leadership"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+      <ServicesCard
+        cardImage="con-ser-4.png"
+        cardName="Risk Management"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+      <ServicesCard
+        cardImage="con-ser-5.png"
+        cardName="Process Management"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+      <ServicesCard
+        cardImage="con-ser-6.png"
+        cardName="Strategic, Learning and Development"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+      <ServicesCard
+        cardImage="con-ser-7.png"
+        cardName="People and Culture Management"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
+    </div>
+  </Container>
+
+  <Container isDark>
+    <h2 class="h2 text-c">
+      Choose the Consulting Model that works best for you
+    </h2>
+    <div class="card-container">
+      {
+        serviceModels.map((model) => {
+          return (
+            <ServiceModelCard
+              cardImage={model.frontmatter.img}
+              cardName={model.frontmatter.title}
+              cardDesc={model.frontmatter.desc}
+              cardList={model.compiledContent()}
+            />
+          );
+        })
+      }
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  a {
+    display: block;
+  }
+
+  div.grid {
+    place-items: center;
+  }
+
+  .card-container {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

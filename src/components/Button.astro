@@ -1,0 +1,58 @@
+---
+const { theme = "blue-700", classes, size = "md", ...rest } = Astro.props;
+
+const background = `var(--${theme})`;
+const foreground =
+  theme === "neutral-100" ? "var(--blue-700)" : "var(--neutral-100)";
+---
+
+<button class:list={[classes]} data-size={size} {...rest}>
+  <slot />
+</button>
+
+<style define:vars={{ foreground, background }}>
+  button {
+    font: inherit;
+    cursor: pointer;
+
+    --bkg: var(--background);
+    --color: var(--foreground);
+
+    background-color: var(--bkg);
+    color: var(--color);
+    border: 0.2em solid var(--bkg);
+    padding: 0.4em 1.25em;
+
+    transition: opacity 250ms ease-in-out;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  [data-size="sm"] {
+    font-size: 0.8rem;
+  }
+
+  [data-size="md"] {
+    font-size: 1.1rem;
+  }
+
+  [data-size="lg"] {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 60rem) {
+    [data-size="sm"] {
+      font-size: 0.8rem;
+    }
+
+    [data-size="md"] {
+      font-size: 0.9rem;
+    }
+
+    [data-size="lg"] {
+      font-size: 1.1rem;
+    }
+  }
+</style>

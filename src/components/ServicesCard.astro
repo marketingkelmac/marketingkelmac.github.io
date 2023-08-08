@@ -1,45 +1,27 @@
 ---
-interface Props {
-  cardImage: string;
-  cardName: string;
-  cardDesc: string;
-  cardLink: string;
-  cardLinkText: string;
-  imgAlt: string;
-}
-
 import { Image } from "astro:assets";
-const {
-  cardImage,
-  cardName,
-  cardDesc,
-  cardLink,
-  cardLinkText,
-  imgAlt = "",
-  ...rest
-} = Astro.props;
+const { cardImage, imgAlt = "", cardName, cardDesc } = Astro.props;
 ---
 
-<div class="card" {...rest}>
+<div class="card">
   <Image
     src={`/assets/images/${cardImage}`}
     alt={imgAlt}
     width={350}
     height={200}
+    format="webp"
   />
   <div>
     <p class="name">{cardName}</p>
     <p>{cardDesc}</p>
-    <a href={cardLink}>{cardLinkText}</a>
   </div>
 </div>
-
 <style>
   .card {
-    min-height: 30rem;
-    width: 20rem;
-    background-color: var(--neutral-100);
-    color: var(--blue-700);
+    width: 16rem;
+    background-color: var(--blue-700);
+    color: var(--neutral-100);
+    box-shadow: 4px 4px 10px -4px rgba(0, 0, 0, 0.75);
   }
 
   .card div {
@@ -50,10 +32,15 @@ const {
     font-weight: 700;
     font-size: 1.25rem;
     margin-bottom: 0.5em;
+    line-height: 1.2;
   }
 
   .card img {
     object-fit: cover;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 
   a {
