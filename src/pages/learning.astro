@@ -5,26 +5,28 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import ServicesCard from "../components/ServicesCard.astro";
 import ServiceModelCard from "../components/ServiceModelCard.astro";
-const serviceModels = await Astro.glob("../content/consulting-models/*.md");
+const serviceModels = await Astro.glob("../content/learning-models/*.md");
 ---
 
 <Layout title="Kelamc Group | Consulting">
   <Container isDark classes="hero hero-consult" background="home-bg.jpg">
-    <h1 class="h1-lg text-c">Consulting</h1>
+    <h1 class="h1-lg text-c">Learning</h1>
     <p class="hero-p">
-      The time and effort required to attain and maintain an ISO management
-      system and product certification can bring you so much more than simple
-      compliance with regulatory and customer requirements. Innovation and
-      competitive advantage can and should be the corporation’s target.
+      We know that training people to meet your compliance obligations and drive
+      and sustain competitiveness is only half of the journey towards creating a
+      lasting culture of compliance and competitiveness within our organization.
+      Equally important is our principle that organizations need teaching too.
+      Why? Organizations, like people, can be creatures of habit. Old routines
+      and behaviors that impede attaining compliance.
     </p>
-    <a class="text-c" href="/contact-us">
-      <Button theme="blue-400" size="lg">Contact Us</Button>
+    <a class="text-c" href="/courses">
+      <Button theme="blue-400" size="lg">Our Courses</Button>
     </a>
   </Container>
   <Container>
     <div class="grid two-even">
       <div>
-        <h2 class="h2">Consulting Services We Provide</h2>
+        <h2 class="h2">Learning Topics We Cover</h2>
         <p>
           Experience, insight, and leadership, along with corporate commitment,
           are required to advance your corporation to new levels of performance
@@ -36,57 +38,55 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
         </p>
       </div>
       <Image
-        src="/assets/images/consulting-1.png"
+        src="/assets/images/learning-1.png"
         class="no-mobile"
         width={600}
         height={400}
-        alt="A consulting guiding a company"
+        alt="A Learner"
         format="webp"
       />
     </div>
     <div class="card-container">
       <ServicesCard
         cardImage="con-ser-1.png"
-        cardName="ISO Certification Management Systems"
+        cardName="Quality Management Systems"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
         cardImage="con-ser-2.png"
-        cardName="Regulatory Compliance Systems"
+        cardName="Information Security"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
         cardImage="con-ser-3.png"
-        cardName="Strategic Leadership"
+        cardName="Food Safety"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
         cardImage="con-ser-4.png"
-        cardName="Risk Management"
+        cardName="Medical Devices"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
         cardImage="con-ser-5.png"
-        cardName="Process Management"
+        cardName="Occupational Health and Safety"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
         cardImage="con-ser-6.png"
-        cardName="Strategic, Learning and Development"
+        cardName="Environmental Management"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
         cardImage="con-ser-7.png"
-        cardName="People and Culture Management"
+        cardName="Integrated Management Course"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
     </div>
   </Container>
 
   <Container isDark>
-    <h2 class="h2 text-c">
-      Choose the Consulting Model that works best for you
-    </h2>
+    <h2 class="h2 text-c">We offer various delivery methods</h2>
     <div class="card-container">
       {
         serviceModels.map((model) => {

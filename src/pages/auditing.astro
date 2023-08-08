@@ -5,17 +5,18 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import ServicesCard from "../components/ServicesCard.astro";
 import ServiceModelCard from "../components/ServiceModelCard.astro";
-const serviceModels = await Astro.glob("../content/consulting-models/*.md");
+const serviceModels = await Astro.glob("../content/auditing-models/*.md");
 ---
 
-<Layout title="Kelamc Group | Consulting">
+<Layout title="Kelamc Group | Auditing">
   <Container isDark classes="hero hero-consult" background="home-bg.jpg">
-    <h1 class="h1-lg text-c">Consulting</h1>
+    <h1 class="h1-lg text-c">Auditing</h1>
     <p class="hero-p">
-      The time and effort required to attain and maintain an ISO management
-      system and product certification can bring you so much more than simple
-      compliance with regulatory and customer requirements. Innovation and
-      competitive advantage can and should be the corporation’s target.
+      We have global network or access to a global network of leading
+      ISO/Regulatory and Attorneys can perform these audits. We can also
+      supplement your supply chain and/or internal quality auditing programme by
+      conducting routine audits with your own personnel to enhance objectivity
+      and criticality of the audit process.
     </p>
     <a class="text-c" href="/contact-us">
       <Button theme="blue-400" size="lg">Contact Us</Button>
@@ -24,7 +25,7 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
   <Container>
     <div class="grid two-even">
       <div>
-        <h2 class="h2">Consulting Services We Provide</h2>
+        <h2 class="h2">Auditing Services We Provide</h2>
         <p>
           Experience, insight, and leadership, along with corporate commitment,
           are required to advance your corporation to new levels of performance
@@ -36,11 +37,11 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
         </p>
       </div>
       <Image
-        src="/assets/images/consulting-1.png"
+        src="/assets/images/auditing-1.png"
         class="no-mobile"
         width={600}
         height={400}
-        alt="A consulting guiding a company"
+        alt="A picture depicting an audit scenario"
         format="webp"
       />
     </div>
@@ -57,7 +58,7 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
       />
       <ServicesCard
         cardImage="con-ser-3.png"
-        cardName="Strategic Leadership"
+        cardName="Managed Service Outside Supplier"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
@@ -66,13 +67,13 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
-        cardImage="con-ser-5.png"
-        cardName="Process Management"
+        cardImage="aud-ser-5.png"
+        cardName="Information Security"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
-        cardImage="con-ser-6.png"
-        cardName="Strategic, Learning and Development"
+        cardImage="aud-ser-6.png"
+        cardName="Food Safety audits"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
       <ServicesCard
@@ -80,13 +81,16 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
         cardName="People and Culture Management"
         cardDesc="If you’re ready to innovate and transform your organization with ISO"
       />
+      <ServicesCard
+        cardImage="aud-ser-8.png"
+        cardName="Software Development"
+        cardDesc="If you’re ready to innovate and transform your organization with ISO"
+      />
     </div>
   </Container>
 
   <Container isDark>
-    <h2 class="h2 text-c">
-      Choose the Consulting Model that works best for you
-    </h2>
+    <h2 class="h2 text-c">Choose the Auditing Model that works best for you</h2>
     <div class="card-container">
       {
         serviceModels.map((model) => {

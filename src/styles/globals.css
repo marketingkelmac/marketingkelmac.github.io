@@ -142,3 +142,14 @@ section {
     display: none;
   }
 }
+
+/* Misc */
+.service-card .back {
+  text-align: center;
+}
+
+.service-card .back ul {
+  list-style: disc;
+  padding-left: 1rem;
+  text-align: left;
+}

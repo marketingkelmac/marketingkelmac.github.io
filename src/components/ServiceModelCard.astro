@@ -1,61 +1,89 @@
 ---
 import { Image } from "astro:assets";
 const { cardImage, imgAlt = "", cardName, cardDesc, cardList } = Astro.props;
+import Button from "./Button.astro";
 ---
 
 <div class="card">
-  <div class="front">
-    <Image
-      src={`/assets/images/${cardImage}`}
-      alt={imgAlt}
-      width={400}
-      height={200}
-      format="webp"
-    />
-    <div>
-      <h3 class="h5 name">{cardName}</h3>
-      <p>{cardDesc}</p>
+  <div class="service-card">
+    <div class="front">
+      <Image
+        src={`/assets/images/${cardImage}`}
+        alt={imgAlt}
+        width={400}
+        height={200}
+        format="webp"
+      />
+      <div>
+        <h3 class="h5 name">{cardName}</h3>
+        <p>{cardDesc}</p>
+        <!-- <Button classes="service-btn" size="sm">Learn More</Button> -->
+      </div>
     </div>
-  </div>
-  <div class="back">
-    <h4 class="h5 name">
-      {cardName}
-    </h4>
-    <p>Included Services</p>
-    <h5 class="h6">Dedicated Consultant Team</h5>
-
-    <div set:html={cardList} />
+    <div class="back">
+      <div>
+        <h4 class="h5 name">
+          {cardName}
+        </h4>
+        <p>Included Services</p>
+        <h5 class="h6">Dedicated Consultant Team</h5>
+        <div set:html={cardList} />
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
   .card {
-    background-color: var(--neutral-100);
     color: var(--blue-700);
-    width: 25rem;
-    height: 30rem;
+    width: 20rem;
+    min-height: 25rem;
+  }
+
+  .service-card {
+    background-color: var(--neutral-100);
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 600ms ease-in-out;
+    perspective: 200px;
+    width: 20rem;
+    min-height: 28rem;
   }
 
   h3.name,
   .back h4.name,
   .back h5 {
     color: var(--blue-700);
+    margin-bottom: 0;
   }
 
   .front div {
     padding: 1rem;
   }
 
-  .back {
-    padding: 1rem;
-    background-color: beige;
-    transform: rotateY(-180deg);
-  }
-
   .front,
   .back {
     position: absolute;
     inset: 0;
+    backface-visibility: hidden;
+    background-color: var(--neutral-100);
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .back div {
+    padding: 0.75rem;
+  }
+
+  .service-card .back ul {
+    list-style: disc;
+  }
+
+  .card:hover .service-card {
+    transform: rotateY(180deg);
   }
 </style>
+
+<script></script>
