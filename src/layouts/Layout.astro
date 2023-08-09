@@ -8,19 +8,25 @@ interface Props {
   title: string;
 }
 
-const { title } = Astro.props;
+const {
+  title = "Kelmac Group - ISO Auditing | ISO Consulting | ISO Training Course",
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="ISO Auditing, ISO Consulting, ISO Training"
+    />
     <!-- Google Tag Manager -->
-    <!-- <script>
+    <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -31,7 +37,7 @@ const { title } = Astro.props;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-P7QXF9P");
-    </script> -->
+    </script>
     <!-- End Google Tag Manager -->
 
     <!-- The fonts are to be hosted on final release -->
@@ -41,12 +47,40 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="description"
+      content="The Kelmac Group® is a leading ISO consulting auditing and training services providers that empower businesses, public agencies, and industry professionals' compliance and success."
+    />
+    <!-- Schema.org for Google -->
+    <meta
+      itemprop="name"
+      content="Kelmac Group - ISO Auditing | ISO Consulting | ISO Training Course"
+    />
+    <meta
+      itemprop="description"
+      content="The Kelmac Group® is a leading ISO consulting auditing and training services providers that empower businesses, public agencies, and industry professionals' compliance and success."
+    />
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta
+      name="og:title"
+      content="Kelmac Group - ISO Auditing | ISO Consulting | ISO Training Course"
+    />
+    <meta
+      name="og:description"
+      content="The Kelmac Group® is a leading ISO consulting auditing and training services providers that empower businesses, public agencies, and industry professionals' compliance and success."
+    />
+    <meta name="og:url" content="https://kelmacgroup.com" />
+    <meta name="og:site_name" content="Kelmac Group" />
+    <meta name="fb:app_id" content="211802131537599" />
+    <meta name="og:type" content="website" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <Navbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
