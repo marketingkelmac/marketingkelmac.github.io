@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+---
+
+<Layout title="Kelmac Group® | News and Articles">
+  <Container classes="hero">
+    <h1 class="h1">News and Articles from the Kelmac Group®</h1>
+  </Container>
+  <Container isDark>
+    <div class="card-container">
+      <!-- <ArticleCard />
+      <ArticleCard />
+      <ArticleCard /> -->
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>

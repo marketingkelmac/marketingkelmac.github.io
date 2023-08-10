@@ -153,3 +153,7 @@ section {
   padding-left: 1rem;
   text-align: left;
 }
+
+.grey-bg {
+  background-color: #ebebeb;
+}

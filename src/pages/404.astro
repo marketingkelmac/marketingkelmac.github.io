@@ -1,7 +1,21 @@
 ---
+import Button from "../components/Button.astro";
+import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Kelmac Group®">
-  <h1>Oops. We seem to have run into an issue</h1>
+  <Container classes="hero text-c">
+    <span>404</span>
+    <h1 class="h1">Oops. We seem to have run into an issue</h1>
+    <a href="/"><Button theme="blue-400">Go to homepage</Button></a>
+  </Container>
 </Layout>
+
+<style>
+  span {
+    font-size: 8rem;
+    color: var(--blue-400);
+    font-weight: 700;
+  }
+</style>

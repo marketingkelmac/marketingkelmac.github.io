@@ -1,0 +1,155 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+import CountryOptions from "../components/CountryOptions.astro";
+---
+
+<Layout title="Kelmac Group® | Contact Page">
+  <Container classes="-bg">
+    <div class="contact-container">
+      <div class="left">
+        <img src="./contact.jpg" alt="" />
+        <p>
+          Looking for more information on our training and other services?
+          Submit your information and a Kelmac Group® representative will get in
+          touch with you as soon as possible.
+        </p>
+      </div>
+      <div class="right">
+        <h1 class="h1">Get in touch with us</h1>
+
+        <form action="https://formspree.io/f/mjvqyydy" method="POST">
+          <label for="name">
+            Name
+            <input type="text" id="name" required />
+          </label>
+          <label for="email">
+            Email
+            <input type="email" id="email" required />
+          </label>
+          <label for="country"
+            >Country
+            <select name="country" id="country" required
+              ><CountryOptions /></select
+            ></label
+          >
+          <label for="phone"
+            >Phone Number
+            <input type="tel" name="phone" id="phone" required /></label
+          >
+          <label for="query" class="query"
+            >What would you like to know about?
+            <textarea name="query" id="query" cols="30" rows="10" required
+            ></textarea></label
+          >
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .contact-container {
+    min-height: calc(100vh - 5rem);
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    place-items: center;
+    gap: 2rem;
+  }
+
+  .left {
+  }
+
+  .right {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px 0px hsl(0, 0%, 0%, 0.15);
+  }
+
+  img {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  label,
+  select,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.4em 0.75em;
+    margin-top: 0.5em;
+  }
+  select,
+  input,
+  textarea {
+    border: 1px grey solid;
+    font-weight: 400;
+  }
+
+  select:focus,
+  input:focus,
+  textarea:focus {
+    outline: 1px var(--blue-400) solid;
+    outline-offset: 2px;
+  }
+  .query {
+    grid-column: 1 / span 2;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: fit-content;
+    padding-inline: 2rem;
+    grid-column: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  h1.h1 {
+    margin-bottom: 0;
+  }
+  small {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width: 60rem) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      order: 2;
+    }
+
+    .right {
+      order: 1;
+      margin-top: 5rem;
+    }
+
+    form {
+      grid-template-columns: 1fr;
+    }
+
+    input[type="submit"],
+    .query {
+      grid-column: 1;
+    }
+  }
+</style>

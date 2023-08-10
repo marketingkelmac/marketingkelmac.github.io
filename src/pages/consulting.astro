@@ -17,10 +17,11 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
       compliance with regulatory and customer requirements. Innovation and
       competitive advantage can and should be the corporation’s target.
     </p>
-    <a class="text-c" href="/contact-us">
+    <a href="/contact-us">
       <Button theme="blue-400" size="lg">Contact Us</Button>
     </a>
   </Container>
+
   <Container>
     <div class="grid two-even">
       <div>
@@ -106,7 +107,7 @@ const serviceModels = await Astro.glob("../content/consulting-models/*.md");
 
 <style>
   a {
-    display: block;
+    display: inline-block;
   }
 
   div.grid {
