@@ -1,7 +1,7 @@
 import { defineConfig, sharpImageService } from "astro/config";
 
 export default defineConfig({
-  site: "https://marketingkelmac.github.io",
+  site: "https://kelmacgroup.com",
   experimental: {
     assets: true,
   },
