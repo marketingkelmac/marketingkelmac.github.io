@@ -3,10 +3,10 @@ export default [
     name: "Home",
     pathname: "/",
   },
-  {
-    name: "Courses",
-    pathname: "/courses",
-  },
+  // {
+  //   name: "Courses",
+  //   pathname: "/courses",
+  // },
   {
     name: "Learning",
     pathname: "/learning",
@@ -19,10 +19,10 @@ export default [
     name: "Auditing",
     pathname: "/auditing",
   },
-  {
-    name: "News & Articles",
-    pathname: "/news-articles",
-  },
+  // {
+  //   name: "News & Articles",
+  //   pathname: "/news-articles",
+  // },
   {
     name: "Contact us",
     pathname: "/contact-us",

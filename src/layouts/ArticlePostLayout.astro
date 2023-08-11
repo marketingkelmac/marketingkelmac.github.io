@@ -1,0 +1,40 @@
+---
+import Layout from "./Layout.astro";
+
+import { slugify, formatDate } from "../js/utils";
+
+const { frontmatter } = Astro.props;
+const { title, description, date, image, category, standard, author } =
+  frontmatter;
+---
+
+<Layout {title} {description}>
+  <header>
+    <div class="container">
+      <img src=`/assets/blogimages/${image.src}` alt={image.alt} />
+      <h1 class="h2">{title}</h1>
+      <small>By {author} on {formatDate(date)}</small>
+      <div class="tags">{category} {standard}</div>
+    </div>
+  </header>
+  <article class="article">
+    <slot />
+  </article>
+</Layout>
+
+<style>
+  header {
+    padding-top: 5rem;
+  }
+
+  header .container > img {
+    display: block;
+    width: 100%;
+    height: 22rem;
+    margin-bottom: 1rem;
+  }
+  .article {
+    max-width: var(--m-width);
+    margin-inline: auto;
+  }
+</style>

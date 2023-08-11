@@ -1,0 +1,89 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<aside id="message-panel">
+  <div class="container">
+    <div class="content">
+      <p>
+        Hello! We are currently on a temporary website as we were facing
+        technical issues with our previous platform. The courses and other
+        assignments associated with the Kelmac Group® are still running as
+        scheduled.
+      </p>
+
+      <p>
+        To get in touch with us, please see details in our <a
+          href="/contact-us"
+        >
+          contact us page</a
+        >.
+      </p>
+    </div>
+    <Icon name="ic:twotone-close" class="icon" />
+  </div>
+</aside>
+
+<style>
+  aside {
+    background-color: var(--blue-500);
+    color: white;
+    padding: 0.5rem;
+  }
+
+  a {
+    color: var(--neutral-100);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  aside a:hover {
+    color: var(--blue-400);
+  }
+
+  aside > div {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .content > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .icon {
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  .close {
+    display: none;
+  }
+
+  @media only screen and (max-width: 60rem) {
+    .content {
+      font-size: 0.8rem;
+    }
+
+    aside > div {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+<script>
+  const closeBtn = document.querySelector(".icon");
+  const messagePanel = document.getElementById("message-panel");
+
+  closeBtn.addEventListener("click", () => {
+    messagePanel.style.display = "none";
+  });
+</script>

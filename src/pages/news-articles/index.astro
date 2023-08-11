@@ -2,19 +2,29 @@
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/Container.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
+
+const allPosts = await Astro.glob("./*.mdx");
+const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Kelmac Group® | News and Articles">
   <Container classes="hero">
     <h1 class="h1">News and Articles from the Kelmac Group®</h1>
   </Container>
-  <Container isDark>
+  <!-- <Container isDark>
     <div class="card-container">
-      <!-- <ArticleCard />
-      <ArticleCard />
-      <ArticleCard /> -->
+      {
+        allPosts.forEach((post) => {
+          return (
+            <ArticleCard
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+            />
+          );
+        })
+      }
     </div>
-  </Container>
+  </Container> -->
 </Layout>
 
 <style>
