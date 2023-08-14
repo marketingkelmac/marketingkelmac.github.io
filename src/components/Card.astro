@@ -8,7 +8,6 @@ interface Props {
   imgAlt: string;
 }
 
-import { Image } from "astro:assets";
 const {
   cardImage,
   cardName,
@@ -21,7 +20,7 @@ const {
 ---
 
 <div class="card" {...rest}>
-  <Image
+  <img
     src={`/assets/images/${cardImage}`}
     alt={imgAlt}
     width={350}

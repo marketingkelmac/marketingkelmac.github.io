@@ -1,0 +1,103 @@
+---
+import Container from "../../components/Container.astro";
+import CourseCard from "../../components/CourseCard.astro";
+import qmsCourseCardData from "../../data/qmsCourseCard";
+import CoursePageAside from "../../components/CoursePageAside.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Kelmac Group® | Courses Offered">
+  <Container isDark classes="hero-small">
+    <h1 class="h1-lg">Our Courses</h1>
+    <p class="hero-p">
+      We specialise in Conformity & Compliance learning for Executive
+      Management, Practitioners & Auditors offering “The Ultimate Learning
+      Experience”
+    </p>
+  </Container>
+
+  <div class="course-grid">
+    <div>
+      <CoursePageAside />
+    </div>
+    <Container>
+      <h2 class="h2">ISO 9001 Quality Management Training Courses</h2>
+      <p>
+        ISO 9001:2015 specifies quality system requirements to be used where an
+        organization requires the ability to consistently provide conforming
+        products, either material or services to meet a customer’s expectations.
+        The ISO 9001 quality system requirements are aimed at achieving customer
+        satisfaction by preventing nonconformances.
+      </p>
+
+      <p>
+        The ISO 9001:2015 standard provides a model on which an organization may
+        build an effective quality management system. ISO 9001 training courses
+        provide you the knowledge and experience you need to reach the heights
+        of success through quality.
+      </p>
+
+      {
+        qmsCourseCardData.map((course) => {
+          return (
+            <CourseCard
+              name={course.name}
+              description={course.description}
+              duration={course.duration}
+              deliveryMethods={course.deliveryMethods}
+              certifier={course.certifier}
+              cqiID={course.cqiID}
+            />
+          );
+        })
+      }
+    </Container>
+  </div>
+
+  <div id="top-jump">
+    <a href="#quick-links"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4l-4.6-4.6Z"></path></svg
+      >
+    </a>
+  </div>
+</Layout>
+
+<style>
+  .course-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
+
+  .course-grid > aside {
+    align-self: right;
+  }
+
+  #top-jump {
+    display: none;
+  }
+  @media only screen and (max-width: 60rem) {
+    .course-grid {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    .course-grid > div:first-child {
+      position: static;
+    }
+    #top-jump {
+      display: block;
+      margin-inline: auto;
+    }
+  }
+
+  .course-grid > div:first-child {
+    height: 100%;
+  }
+</style>../../data/qmsCourseCard

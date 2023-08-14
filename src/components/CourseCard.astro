@@ -1,0 +1,58 @@
+---
+import { slugify } from "../js/utils";
+import Button from "./Button.astro";
+const { name, description, duration, deliveryMethods, certifier, cqiID } =
+  Astro.props;
+---
+
+<article>
+  <a href={`/courses/${slugify(name)}`}> <h4 class="h4">{name}</h4></a>
+  <p>{description}</p>
+  <div class="grid two-even">
+    <div class="left">
+      <p><strong>Duration:</strong> {duration}</p>
+      <p><strong>Delivery Methods:</strong> {deliveryMethods}</p>
+    </div>
+    <div class="right">
+      <img src={`/${certifier}.png`} alt="" />
+      {cqiID && <p>COURSE ID: {cqiID}</p>}
+    </div>
+  </div>
+  <a href={`/courses/${slugify(name)}`}
+    ><Button>View Full Course Details</Button></a
+  >
+  <br />
+  <a href="/contact-us"
+    >Contact us to book a seat or request prices for your region</a
+  >
+</article>
+
+<style>
+  article {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding: 1rem;
+    border-bottom: 1px var(--blue-400) solid;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    background-color: var(--neutral-100);
+  }
+  a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  article > div {
+    align-items: center;
+  }
+
+  .right {
+    width: 15rem;
+    margin-inline: auto;
+  }
+
+  .right p {
+    text-align: center;
+    margin-bottom: 0;
+  }
+</style>

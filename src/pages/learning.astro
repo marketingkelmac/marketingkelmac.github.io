@@ -5,11 +5,12 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import ServicesCard from "../components/ServicesCard.astro";
 import ServiceModelCard from "../components/ServiceModelCard.astro";
+import ContainerBG from "../components/ContainerBG.astro";
 const serviceModels = await Astro.glob("../content/learning-models/*.md");
 ---
 
 <Layout title="Kelamc Group | Consulting">
-  <Container isDark classes="hero hero-consult" background="home-bg.jpg">
+  <ContainerBG isDark classes="hero hero-consult" background="home-bg.jpg">
     <h1 class="h1-lg text-c">Learning</h1>
     <p class="hero-p">
       We know that training people to meet your compliance obligations and drive
@@ -22,7 +23,7 @@ const serviceModels = await Astro.glob("../content/learning-models/*.md");
     <a class="text-c" href="/courses">
       <Button theme="blue-400" size="lg">Our Courses</Button>
     </a>
-  </Container>
+  </ContainerBG>
   <Container>
     <div class="grid two-even">
       <div>
@@ -37,13 +38,12 @@ const serviceModels = await Astro.glob("../content/learning-models/*.md");
           compliance management system and product certification.
         </p>
       </div>
-      <Image
+      <img
         src="/assets/images/learning-1.png"
         class="no-mobile"
         width={600}
         height={400}
         alt="A Learner"
-        format="webp"
       />
     </div>
     <div class="card-container">

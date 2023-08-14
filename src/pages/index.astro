@@ -4,10 +4,11 @@ import Container from "../components/Container.astro";
 import Button from "../components/Button.astro";
 import ToggleInfo from "../components/homepage/ToggleInfo.astro";
 import Careers from "../components/Careers.astro";
+import ContainerBG from "../components/ContainerBG.astro";
 ---
 
 <Layout title="Kelmac Group®">
-  <Container isDark classes="hero" background="home-bg.jpg">
+  <ContainerBG isDark classes="hero" background="home-bg.jpg">
     <h1>Industry Leaders in Assurance, Innovation & Creating Value</h1>
     <p class="hero-p">
       Turn your conformity assessment, regulatory compliance, or risk management
@@ -17,7 +18,7 @@ import Careers from "../components/Careers.astro";
       technology we will make history.
     </p>
     <Button theme="blue-400" size="lg">About Us</Button>
-  </Container>
+  </ContainerBG>
   <ToggleInfo />
   <Container isDark>
     <h2 class="h2 text-c">Certifications & Approvals</h2>

@@ -1,0 +1,80 @@
+---
+import { standardLinks } from "../data/asideLinks";
+---
+
+<aside>
+  <h5 id="quick-links" class="h5">Quick Links</h5>
+  <div id="quick-links-content">
+    <h6 class="h6">Standards</h6>
+    <ul id="standard-list">
+      {
+        standardLinks.map((standard) => {
+          return (
+            <li>
+              <a href={standard.link}>{standard.name}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</aside>
+
+<style>
+  aside {
+    position: sticky;
+    top: 5rem;
+    padding: 1rem 2rem;
+    width: 15rem;
+    margin-left: auto;
+  }
+
+  #quick-links {
+    margin-top: 5rem;
+  }
+
+  #quick-links-content {
+    display: block;
+  }
+
+  ul {
+    margin-block: 1rem;
+  }
+
+  li {
+    height: 3rem;
+  }
+
+  @media only screen and (max-width: 60rem) {
+    aside {
+      text-align: center;
+      top: 0;
+
+      margin-inline: auto;
+    }
+
+    #quick-links {
+      cursor: pointer;
+      text-decoration: underline 2px;
+      text-underline-offset: 4px;
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+
+    #quick-links-content {
+      display: none;
+    }
+    #quick-links-content.show {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const quickLinks = document.querySelector("#quick-links");
+  const content = document.querySelector("#quick-links-content");
+
+  quickLinks.addEventListener("click", () => {
+    content.classList.toggle("show");
+  });
+</script>

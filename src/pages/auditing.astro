@@ -5,11 +5,12 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import ServicesCard from "../components/ServicesCard.astro";
 import ServiceModelCard from "../components/ServiceModelCard.astro";
+import ContainerBG from "../components/ContainerBG.astro";
 const serviceModels = await Astro.glob("../content/auditing-models/*.md");
 ---
 
 <Layout title="Kelmac Group® | Auditing">
-  <Container isDark classes="hero hero-consult" background="home-bg.jpg">
+  <ContainerBG isDark classes="hero hero-consult" background="home-bg.jpg">
     <h1 class="h1-lg text-c">Auditing</h1>
     <p class="hero-p">
       We have global network or access to a global network of leading
@@ -21,7 +22,7 @@ const serviceModels = await Astro.glob("../content/auditing-models/*.md");
     <a class="text-c" href="/contact-us">
       <Button theme="blue-400" size="lg">Contact Us</Button>
     </a>
-  </Container>
+  </ContainerBG>
   <Container>
     <div class="grid two-even">
       <div>
@@ -36,13 +37,12 @@ const serviceModels = await Astro.glob("../content/auditing-models/*.md");
           compliance management system and product certification.
         </p>
       </div>
-      <Image
+      <img
         src="/assets/images/auditing-1.png"
         class="no-mobile"
         width={600}
         height={400}
         alt="A picture depicting an audit scenario"
-        format="webp"
       />
     </div>
     <div class="card-container">

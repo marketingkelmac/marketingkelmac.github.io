@@ -1,20 +1,9 @@
 ---
-const { isDark, classes, background, blendmode = "multiply" } = Astro.props;
-
-const bgi = `url(/${background})`;
-const blendMode = `${blendmode}`;
+const { isDark, classes } = Astro.props;
 ---
 
-<section class:list={[classes, { dark: isDark }, "bg"]}>
+<section class:list={[classes, { dark: isDark }]}>
   <div class="container">
     <slot />
   </div>
 </section>
-
-<style define:vars={{ bgi, blendMode }}>
-  .bg {
-    background-image: var(--bgi);
-    background-blend-mode: var(--blendMode);
-    background-position: center center;
-  }
-</style>

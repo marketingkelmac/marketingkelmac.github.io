@@ -1,15 +1,13 @@
 ---
-import { Image } from "astro:assets";
 const { cardImage, imgAlt = "", cardName, cardDesc } = Astro.props;
 ---
 
 <div class="card">
-  <Image
-    src={`/assets/images/${cardImage}`}
+  <img
+    src={`./assets/images/${cardImage}`}
     alt={imgAlt}
     width={350}
     height={200}
-    format="webp"
   />
   <div>
     <p class="name">{cardName}</p>
