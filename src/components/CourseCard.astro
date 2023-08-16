@@ -1,7 +1,7 @@
 ---
 import { slugify } from "../js/utils";
 import Button from "./Button.astro";
-const { name, description, duration, deliveryMethods, certifier, cqiID } =
+const { name, description, duration, deliveryMethods, certifier, cqiID, url } =
   Astro.props;
 ---
 
@@ -18,9 +18,7 @@ const { name, description, duration, deliveryMethods, certifier, cqiID } =
       {cqiID && <p>COURSE ID: {cqiID}</p>}
     </div>
   </div>
-  <a href={`/courses/${slugify(name)}`}
-    ><Button>View Full Course Details</Button></a
-  >
+  <a href={`/courses/${url}`}><Button>View Full Course Details</Button></a>
   <br />
   <a href="/contact-us"
     >Contact us to book a seat or request prices for your region</a
@@ -32,7 +30,7 @@ const { name, description, duration, deliveryMethods, certifier, cqiID } =
     max-width: 50rem;
     margin-inline: auto;
     padding: 1rem;
-    border-bottom: 1px var(--blue-400) solid;
+    box-shadow: 4px 4px 15px -4px rgba(0, 0, 0, 0.25);
     padding-bottom: 2rem;
     margin-bottom: 1rem;
     background-color: var(--neutral-100);

@@ -1,0 +1,60 @@
+---
+import Container from "../Container.astro";
+const { courseProg, whoCanAttend, courseBasics } = Astro.props;
+---
+
+<Container>
+  <h2 class="h2 text-c">Additional Details</h2>
+  <br />
+  <br />
+  <div class="grid two-even">
+    <div>
+      <h3 class="h3">Who Can Attend?</h3>
+      <ul>
+        {
+          whoCanAttend.map((data) => {
+            return <li>{data}</li>;
+          })
+        }
+      </ul>
+    </div>
+    <div>
+      <h3 class="h3">Course Basics</h3>
+      <ul>
+        {
+          courseBasics.map((data) => {
+            return <li>{data}</li>;
+          })
+        }
+      </ul>
+    </div>
+  </div>
+  <h3 class="h3 mg-top">Course Programme</h3>
+  <div class="prog" set:html={courseProg.compiledContent()} />
+</Container>
+<style>
+  ul {
+    display: grid;
+    place-content: center;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .mg-top {
+    margin-top: 2rem;
+  }
+
+  .prog {
+    columns: 2;
+  }
+
+  li,
+  .prog > ul {
+    list-style: disc;
+  }
+  @media only screen and (max-width: 45rem) {
+    .prog {
+      columns: 1;
+    }
+  }
+</style>

@@ -7,6 +7,7 @@ export default [
     deliveryMethods: "Online, Virtual, Classroom",
     certifier: "cqi",
     cqiID: "896768",
+    url: "9001-fundamentals",
   },
   {
     name: "QMS ISO 9001:2015 Internal Auditor Training Course | CQI IRCA Certified",
@@ -16,6 +17,7 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
     cqiID: "896768",
+    url: "9001-iac",
   },
 
   {
@@ -26,5 +28,6 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
     cqiID: "896768",
+    url: "9001-lac",
   },
 ];

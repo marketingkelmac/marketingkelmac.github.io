@@ -2,6 +2,10 @@
 import Container from "../../components/Container.astro";
 import CourseCard from "../../components/CourseCard.astro";
 import qmsCourseCardData from "../../data/qmsCourseCard";
+import ismsCourseCardData from "../../data/ismsCourseCard";
+import emsCourseCardData from "../../data/emsCourseCard";
+import ohsmsCourseCardData from "../../data/ohsmsCourseCard";
+import fsmsCourseCardData from "../../data/fsmsCourseCard";
 import CoursePageAside from "../../components/CoursePageAside.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
@@ -21,7 +25,7 @@ import Layout from "../../layouts/Layout.astro";
       <CoursePageAside />
     </div>
     <Container>
-      <h2 class="h2">ISO 9001 Quality Management Training Courses</h2>
+      <h2 class="h2" id="9001">ISO 9001 Quality Management Training Courses</h2>
       <p>
         ISO 9001:2015 specifies quality system requirements to be used where an
         organization requires the ability to consistently provide conforming
@@ -47,6 +51,96 @@ import Layout from "../../layouts/Layout.astro";
               deliveryMethods={course.deliveryMethods}
               certifier={course.certifier}
               cqiID={course.cqiID}
+              url={course.url}
+            />
+          );
+        })
+      }
+      <h2 class="h2" id="27001">
+        ISO/IEC 27001 Information Security Management Systems
+      </h2>
+      <p>
+        ISO 27001 is the international standard for Information Security
+        Management Systems (ISMS) based largely upon the previously adopted BS
+        7799 used commonly since 1995 for managing information security. ISO
+        27001 provides the framework for a technology neutral, vendor-neutral
+        management system that enables an organization to assure itself that its
+        information security measures are effective. This includes the continued
+        accessibility, confidentiality and integrity of its own information and
+        that of its stakeholders as well as legal compliance.
+      </p>
+      {
+        ismsCourseCardData.map((course) => {
+          return (
+            <CourseCard
+              name={course.name}
+              description={course.description}
+              duration={course.duration}
+              deliveryMethods={course.deliveryMethods}
+              certifier={course.certifier}
+              cqiID={course.cqiID}
+              url={course.url}
+            />
+          );
+        })
+      }
+      <h2 class="h2" id="14001">ISO 14001 Environmental Management Systems</h2>
+      <p>
+        ISO 14000 is a family of ISO standards that applies to environmental
+        management systems. ISO 14001 consists of two general standards. ISO
+        14001 lists the requirements necessary for an EMS system to be
+        ISO-compliant, while 14004 provides general guidelines for EMS quality.
+        Other ISO 14001 standards are more industry-specific in nature.
+      </p>
+      {
+        emsCourseCardData.map((course) => {
+          return (
+            <CourseCard
+              name={course.name}
+              description={course.description}
+              duration={course.duration}
+              deliveryMethods={course.deliveryMethods}
+              certifier={course.certifier}
+              cqiID={course.cqiID}
+              url={course.url}
+            />
+          );
+        })
+      }
+      <h2 class="h2" id="45001">
+        ISO 45001 Occupational Health & Safety Management Systems
+      </h2>
+      <p></p>
+      {
+        ohsmsCourseCardData.map((course) => {
+          return (
+            <CourseCard
+              name={course.name}
+              description={course.description}
+              duration={course.duration}
+              deliveryMethods={course.deliveryMethods}
+              certifier={course.certifier}
+              cqiID={course.cqiID}
+              url={course.url}
+            />
+          );
+        })
+      }
+      <h2 class="h2" id="22000">
+        ISO/FSSC 22000 Food Safety Management Systems
+      </h2>
+      <p></p>
+      {
+        fsmsCourseCardData.map((course) => {
+          return (
+            <CourseCard
+              name={course.name}
+              description={course.description}
+              duration={course.duration}
+              deliveryMethods={course.deliveryMethods}
+              certifier={course.certifier}
+              cqiID={course.cqiID}
+              url={course.url}
             />
           );
         })
@@ -70,6 +164,11 @@ import Layout from "../../layouts/Layout.astro";
 </Layout>
 
 <style>
+  h2:not(:first-of-type) {
+    margin-top: 3rem;
+    scroll-margin-top: 2rem;
+  }
+
   .course-grid {
     display: grid;
     grid-template-columns: auto auto;
@@ -92,12 +191,25 @@ import Layout from "../../layouts/Layout.astro";
       position: static;
     }
     #top-jump {
-      display: block;
-      margin-inline: auto;
+      display: fixed;
+      left: 0;
+      right: 0;
+      bottom: 2rem;
     }
   }
 
   .course-grid > div:first-child {
     height: 100%;
   }
-</style>../../data/qmsCourseCard
+</style>
+
+<script>
+  const asideLinks = document.querySelectorAll(".standard-links");
+  const navBar = document.querySelector("nav");
+
+  asideLinks.forEach((link) => {
+    setTimeout(() => {
+      navBar.style.top = "-5rem";
+    }, 300);
+  });
+</script>

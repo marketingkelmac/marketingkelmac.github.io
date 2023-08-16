@@ -21,6 +21,10 @@
   --m-width: 75rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -112,7 +116,7 @@ a:hover {
   min-height: 60vh;
   display: grid;
   place-items: center;
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 
 .hero-p {
@@ -163,4 +167,13 @@ section {
 
 .grey-bg {
   background-color: #ebebeb;
+}
+
+.prog > ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.prog > ul li:last-child {
+  margin-bottom: 1rem;
 }

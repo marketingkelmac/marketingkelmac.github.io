@@ -1,0 +1,129 @@
+---
+import Container from "../Container.astro";
+const {
+  title,
+  courseDuration,
+  courseMethods,
+  courseFor,
+  courseUnique,
+  certifier,
+  certifierID,
+} = Astro.props;
+---
+
+<Container>
+  <div class="grid two-even details-grid">
+    <div class="certifier-img">
+      <img src={`/${certifier}.png`} alt="" width="200px" />
+      {
+        certifier === "cqi" && (
+          <p>
+            <span>CQI Course ID</span>
+            {certifierID}
+          </p>
+        )
+      }
+    </div>
+    <ul>
+      <li><span>Course Duration</span> 1 day</li>
+      <li><span>Course Delivery Methods</span> Online, Virtual, Classroom</li>
+    </ul>
+  </div>
+
+  <div class="grid two-even">
+    <div>
+      <h2 class="h3"><span>Course Overview</span> Who is this course for?</h2>
+      <p>
+        The focus of our Online ISO 9001:2015 Fundamentals Training Course is to
+        comprehensively introduce Learners to Quality Management Systems and
+        provide them with a highly insightful introduction to the purpose,
+        intent and requirements of ISO 9001:2015 plus the business case for
+        adopting ISO 9001. It can be completed anytime, anywhere - fully online
+        24/7!
+      </p>
+    </div>
+    <div>
+      <h2 class="h3">
+        <span>Key Course Learning Outcome</span> Why is this course unique?
+      </h2>
+      <p>
+        This training course is a first-of-its-kind, introducing a highly
+        interactive and yet fully online training course for those looking to
+        gain a comprehensive & practical understanding of ISO 9001:2015. We are
+        the first provider in Ireland to launch eLearning for Quality Management
+        & ISO 9001:2015 & now the first and only training provider in the world
+        with a fully online CQI & IRCA Certified online ISO 9001:2015 Foundation
+        Course.
+      </p>
+    </div>
+  </div>
+</Container>
+
+<style>
+  .details-grid {
+    margin-bottom: 3rem;
+  }
+
+  .certifier-img {
+    display: grid;
+    place-items: center;
+  }
+  .certifier-img p {
+    text-align: center;
+    margin-top: 1em;
+    font-weight: 700;
+  }
+  .certifier-img p span {
+    display: block;
+    font-weight: 400;
+  }
+  img {
+    object-fit: contain;
+  }
+  h2 span {
+    display: block;
+    color: var(--neutral-400);
+    text-transform: uppercase;
+    font-size: var(--step-0);
+  }
+
+  ul {
+    display: block;
+    width: fit-content;
+    color: var(--neutral-100);
+    background-color: var(--blue-700);
+    padding: 1rem;
+    margin-inline: auto;
+  }
+
+  li {
+    margin-block: 0.5em;
+  }
+
+  li span {
+    display: inline-block;
+    text-align: right;
+    min-width: 20ch;
+    margin-right: 1rem;
+    font-weight: 700;
+  }
+  li span::after {
+    content: ":";
+  }
+
+  @media only screen and (max-width: 40rem) {
+    li {
+      text-align: center;
+    }
+
+    li span {
+      display: block;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    li span::after {
+      content: "";
+    }
+  }
+</style>

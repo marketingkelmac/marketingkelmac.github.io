@@ -1,0 +1,59 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Container from "../../components/Container.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as qmsProg from "../../content/courseprogs/9001-fundamentals.md";
+---
+
+<Layout
+  title="QMS ISO 9001:2015 Fundamentals Training Course | CQI IRCA Certified"
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      QMS ISO 9001:2015 Fundamentals Training Course | CQI IRCA Certified
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro certifier="cqi" certifierID="2291" />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Any individual requiring a working knowledge and understanding of the ISO 9000 series of standards",
+      "Quality professionals/consultants",
+      "Presidents/Vice Presidents/CEOs",
+      "ISO Coordinators/management representatives",
+      "Engineers",
+      "Supervisors",
+    ]}
+    courseBasics={[
+      "This is a fully online training course",
+      "This course covers EACH clause of ISO 9001:2015",
+      "It is the most comprehensive course available including 10 Learning Hours Complete anytime, anywhere",
+      "Ideal for those looking to get started & understand the requirements of Quality Management Systems and ISO 9001:2015",
+      "Fully Certified by CQI & IRCA!",
+    ]}
+    courseProg={qmsProg}
+  />
+</Layout>

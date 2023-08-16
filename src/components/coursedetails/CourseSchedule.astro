@@ -1,0 +1,125 @@
+---
+import Container from "../Container.astro";
+const { regionSchedule } = Astro.props;
+---
+
+<Container isDark>
+  <h2 id="btn" class="text-c h2">
+    Schedule <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z"></path></svg
+    >
+  </h2>
+  {
+    regionSchedule ? (
+      <table class="table">
+        <tr>
+          <th>Region</th>
+          <th>Dates</th>
+          <th>Delivery Method</th>
+        </tr>
+
+        {regionSchedule.map((schedule) => {
+          return (
+            <tr>
+              <td>{schedule.region}</td>
+              <td>{schedule.date}</td>
+              <td>{schedule.method}</td>
+            </tr>
+          );
+        })}
+      </table>
+    ) : (
+      <p class="table">
+        There are no training scheduled for this course in the next quarter.
+        Please feel free to contact us at{" "}
+        <a href="mailto:info@kelmacgroup.com">info@kelmacgroup.com</a> to book a
+        training at your convenience.
+      </p>
+    )
+  }
+</Container>
+
+<style>
+  h2 {
+    cursor: pointer;
+  }
+
+  h2 > svg {
+    display: inline;
+  }
+
+  .show-btn svg {
+    rotate: 90deg;
+  }
+
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    transform: scaleY(0);
+    display: none;
+    transform-origin: top;
+    transition: all 250ms ease-in-out;
+  }
+
+  .table.show {
+    transform: scaleY(1);
+    display: table;
+  }
+  th {
+    height: 3rem;
+    background-color: var(--blue-400);
+  }
+  td {
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--blue-400);
+  }
+  tr:nth-child(even) {
+    background-color: hsl(214, 62%, 62%, 0.25);
+  }
+
+  p a {
+    color: var(--blue-400);
+  }
+
+  @media only screen and (max-width: 50rem) {
+    th {
+      display: none;
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+
+    tr:nth-child(even) {
+      background-color: inherit;
+    }
+    tr:nth-child(3) {
+      background-color: hsl(214, 62%, 62%, 0.25);
+    }
+
+    td:nth-child(2) {
+      font-weight: 700;
+    }
+  }
+</style>
+
+<script>
+  const btn = document.querySelector("#btn");
+  const table = document.querySelector(".table");
+
+  btn.addEventListener("click", () => {
+    table.classList.toggle("show");
+    btn.classList.toggle("show-btn");
+  });
+</script>
