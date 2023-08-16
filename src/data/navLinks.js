@@ -3,10 +3,10 @@ export default [
     name: "Home",
     pathname: "/",
   },
-  // {
-  //   name: "Courses",
-  //   pathname: "/courses",
-  // },
+  {
+    name: "Courses",
+    pathname: "/courses",
+  },
   {
     name: "Learning",
     pathname: "/learning",

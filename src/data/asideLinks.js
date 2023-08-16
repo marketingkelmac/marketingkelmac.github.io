@@ -19,10 +19,10 @@ export const standardLinks = [
     name: "ISO/FSSC 22000 ",
     link: "#22000",
   },
-  //   {
-  //     name: "ISO 13485",
-  //     link: "#13485",
-  //   },
+  {
+    name: "ISO 13485",
+    link: "#13485",
+  },
   //   {
   //     name: "ISO 17025",
   //     link: "#17025",

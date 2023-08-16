@@ -6,6 +6,7 @@ import ismsCourseCardData from "../../data/ismsCourseCard";
 import emsCourseCardData from "../../data/emsCourseCard";
 import ohsmsCourseCardData from "../../data/ohsmsCourseCard";
 import fsmsCourseCardData from "../../data/fsmsCourseCard";
+import mdqmsCourseCardData from "../../data/mdqmsCourseCard";
 import CoursePageAside from "../../components/CoursePageAside.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
@@ -132,6 +133,52 @@ import Layout from "../../layouts/Layout.astro";
       <p></p>
       {
         fsmsCourseCardData.map((course) => {
+          return (
+            <CourseCard
+              name={course.name}
+              description={course.description}
+              duration={course.duration}
+              deliveryMethods={course.deliveryMethods}
+              certifier={course.certifier}
+              cqiID={course.cqiID}
+              url={course.url}
+            />
+          );
+        })
+      }
+      <h2 class="h2" id="13485">
+        ISO 13485 Medical Devices Quality Management Systems
+      </h2>
+      <p>
+        There is probably no other industry where the importance of product
+        conformity is as crucial as that in the design and manufacture of
+        medical devices. Standards in any industry are an important way both to
+        safeguard product conformity while simultaneously harmonizing
+        requirements, not only nationally, but internationally as well.
+      </p>
+
+      <p>
+        An important step in safeguarding product conformity and ensuring that a
+        manufacturing or design process can consistently produce product of the
+        required standard, is a structured management system. With regards to
+        medical devices, there is no standard that better represents the
+        requirements for a comprehensive management system than ISO 13485.
+        Compliance with ISO 13485 is often seen as the first step in achieving
+        compliance with regulatory requirements.
+      </p>
+
+      <p>
+        Increasingly, certification to ISO 13485 is becoming the preferred
+        method for medical device manufacturers and their sub tier
+        suppliers/contractors to demonstrate the intent to comply with
+        applicable regulatory and statutory requirements. Medical device
+        manufacturers who are placing their products on the market within the
+        European Union will need to address compliance with the requirements of
+        the applicable Medical Device Directive and the CE marking process. ISO
+        13485 is recognized as an aid in supporting compliance with the MDD.
+      </p>
+      {
+        mdqmsCourseCardData.map((course) => {
           return (
             <CourseCard
               name={course.name}

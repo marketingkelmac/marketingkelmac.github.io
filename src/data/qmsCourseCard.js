@@ -6,8 +6,8 @@ export default [
     duration: "1 day",
     deliveryMethods: "Online, Virtual, Classroom",
     certifier: "cqi",
-    cqiID: "896768",
-    url: "9001-fundamentals",
+    cqiID: "1912",
+    url: "iso-9001-fundamentals-training-course",
   },
   {
     name: "QMS ISO 9001:2015 Internal Auditor Training Course | CQI IRCA Certified",
@@ -16,8 +16,8 @@ export default [
     duration: "2 days",
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
-    cqiID: "896768",
-    url: "9001-iac",
+    cqiID: "18113",
+    url: "iso-9001-internal-auditor-training-course",
   },
 
   {
@@ -27,7 +27,7 @@ export default [
     duration: "5 days",
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
-    cqiID: "896768",
-    url: "9001-lac",
+    cqiID: "18114",
+    url: "iso-9001-lead-auditor-training-course",
   },
 ];

@@ -1,0 +1,64 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as mdqmsProg from "../../content/courseprogs/13485-fundamentals.md";
+---
+
+<Layout title="MDQMS Fundamentals based on ISO 13485:2016 Training Course">
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      MDQMS Fundamentals based on ISO 13485:2016 Training Course
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="kelmac"
+    certifierID={null}
+    courseDuration="1 day"
+    courseMethods="Online, Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® QMS Fundamentals based on ISO 13485:2016 is to comprehensively introduce Learners to Quality Management Systems and provide them with a highly insightful introduction to the purpose, intent and requirements of ISO 13485:2016 plus the business case for adopting ISO 13485:2016."
+    courseUnique="Our training demonstrates to the Learner the beneﬁts of adopting the unique Kelmac Group® One System Model for enhancing organizational compliance, effectiveness and efﬁciency based on utilizing Business Process Management to enhance ISO."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Quality Managers",
+      "Quality Professionals/Technicians",
+      "Quality Engineers",
+      "Procurement Personnel",
+      "Financial Personnel",
+      "Document Controllers ",
+      "Internal Auditors",
+      "Owner Managers ",
+      "Implementation Members",
+    ]}
+    courseBasics={[
+      "This is a 1-day (8hr) learning event.",
+      "Start/Finsh Times: 08:00am - 17:30pm",
+      "Ideal for those looking to get started & understand the requirements of Quality Management Systems and ISO 13485:2016",
+    ]}
+    courseProg={mdqmsProg}
+  />
+</Layout>

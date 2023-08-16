@@ -1,0 +1,64 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as mdqmsProg from "../../content/courseprogs/13485-iac.md";
+---
+
+<Layout title="MDQMS ISO 13485:2016 Internal Auditor Training Course ">
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">MDQMS ISO 13485:2016 Internal Auditor Training Course</h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="kelmac"
+    certifierID={null}
+    courseDuration="2 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the VIRTUAL [VILT] Kelmac Group® ISO 13485:2016 Internal Auditor Training Course is on assisting and verifying the competencies/capabilities of the Learner to be able to effectively audit a product, process or department/function of a QMS based on ISO 13485:2016 requirements with specific emphasis of 1st Party auditing [Internal audits]."
+    courseUnique="Our training demonstrates to the Learner the beneﬁts of adopting the unique Kelmac Group® One System Model for enhancing organizational compliance, effectiveness and efﬁciency based on utilizing Business Process Management to enhance ISO."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "24th July, 2023",
+        method: "Classroom",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Individuals interested in conducting first-party audits of QMS",
+      "Quality Management Representatives",
+      "Quality Consultants",
+      "Quality Directors",
+      "Regulatory Affairs Managers",
+      "Quality Managers/Supervisors",
+      "Procurement Personnel",
+      "Financial Personnel",
+      "Document Controllers ",
+      "Owner Managers ",
+      "Quality cross-functional team members of a Quality implementation project",
+    ]}
+    courseBasics={[
+      "This is a two-day (14-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m.",
+      "Prior Learning Requirement: Learners requiring the knowledge and skills to conduct entire medical device quality management system audit against ISO 13485 should be directed to attend a CQI and IRCA Certified MD-QMS ISO 13485:2016 Lead Auditor course.",
+    ]}
+    courseProg={mdqmsProg}
+  />
+</Layout>

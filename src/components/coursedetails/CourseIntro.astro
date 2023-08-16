@@ -25,8 +25,8 @@ const {
       }
     </div>
     <ul>
-      <li><span>Course Duration</span> 1 day</li>
-      <li><span>Course Delivery Methods</span> Online, Virtual, Classroom</li>
+      <li><span>Course Duration</span> {courseDuration}</li>
+      <li><span>Course Delivery Methods</span> {courseMethods}</li>
     </ul>
   </div>
 
@@ -34,12 +34,7 @@ const {
     <div>
       <h2 class="h3"><span>Course Overview</span> Who is this course for?</h2>
       <p>
-        The focus of our Online ISO 9001:2015 Fundamentals Training Course is to
-        comprehensively introduce Learners to Quality Management Systems and
-        provide them with a highly insightful introduction to the purpose,
-        intent and requirements of ISO 9001:2015 plus the business case for
-        adopting ISO 9001. It can be completed anytime, anywhere - fully online
-        24/7!
+        {courseFor}
       </p>
     </div>
     <div>
@@ -47,13 +42,7 @@ const {
         <span>Key Course Learning Outcome</span> Why is this course unique?
       </h2>
       <p>
-        This training course is a first-of-its-kind, introducing a highly
-        interactive and yet fully online training course for those looking to
-        gain a comprehensive & practical understanding of ISO 9001:2015. We are
-        the first provider in Ireland to launch eLearning for Quality Management
-        & ISO 9001:2015 & now the first and only training provider in the world
-        with a fully online CQI & IRCA Certified online ISO 9001:2015 Foundation
-        Course.
+        {courseUnique}
       </p>
     </div>
   </div>

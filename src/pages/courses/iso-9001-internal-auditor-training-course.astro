@@ -1,0 +1,108 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as qmsProg from "../../content/courseprogs/9001-iac.md";
+---
+
+<Layout
+  title="QMS ISO 9001:2015 Fundamentals Training Course | CQI IRCA Certified"
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      QMS ISO 9001:2015 Fundamentals Training Course | CQI IRCA Certified
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="cqi"
+    certifierID="18113"
+    courseDuration="2 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® Academy QMS Internal Auditor course is on assisting and equipping the Learner in accelerating their career in QMS Auditing by providing the Learner with a CQI-IRCA Accredited training qualification that enables them conduct a robust and effective QMS audit a process, activity or department/function based upon the requirements of ISO 9001:2015 and in accordance with the requirements of ISO 19011:2018."
+    courseUnique="With 50% more skill based exercises compared to our competitors. We focus on auditing that provides Assurance that the Quality Management System meets the needs of the interested parties & our Learners are equipped to make higher quality insights for improved organizational performance.  Learners practice using audit tools and techniques they can uses immediately and that inspire's Learner confidence."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "5th-6th September, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "19th-20th September, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "Ireland",
+        date: "3rd-4th October, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "17th-18th October, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "Ireland",
+        date: "7th-8th November, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "21st-22nd November, 2023",
+        method: "Classroom",
+      },
+      {
+        region: "Ireland",
+        date: "5th-6th December, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "2nd-3rd September (CDT), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "10th-11th October (CDT), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "5th-6th November (CDT), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "10th-11th December (CDT), 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Individuals interested in conducting first-party audits of QMS",
+      "Quality Management Representatives",
+      "Quality Consultants",
+      "Quality Directors",
+      "Regulatory Affairs Managers",
+      "Quality Managers/Supervisors",
+      "Procurement Personnel",
+      "Financial Personnel",
+      "Document Controllers ",
+      "Owner Managers",
+      "Quality cross-functional team members of a Quality implementation project",
+    ]}
+    courseBasics={[
+      " This is a two-day (14-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5:30 p.m. (each day)",
+      "Prior Learning Requirement: Learners are required to be familiar with ISO 9001:2015 Requirements or have received ISO 9001:2015 Fundamentals Training in advance of attending this course",
+    ]}
+    courseProg={qmsProg}
+  />
+</Layout>
