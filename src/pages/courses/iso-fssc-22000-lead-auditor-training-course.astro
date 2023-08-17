@@ -1,0 +1,62 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as fsmsProg from "../../content/courseprogs/22000-lac.md";
+---
+
+<Layout
+  title="FSSC 22000 V6.0 and ISO 22000:2018 Auditor/Lead Auditor Training Course | CQI-IRCA Certified "
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      FSSC 22000 V6.0 and ISO 22000:2018 Auditor/Lead Auditor Training Course |
+      CQI-IRCA Certified
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="fssc-cqi"
+    certifierID="1981"
+    courseDuration="5 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="We offer a comprehensive, highly interactive five-day FSSC 22000 V6.0 and ISO 22000:2018 Auditor/Lead Auditor training course that teaches students the principles, processes, and techniques used for the assessment of and management of Food Safety Hazards; and their significance for FSMS Auditor/Lead Auditors. Kelmac Group® Academy are the oldest IRCA Accredited Training Provider of FSSC 22000 v6.0 / ISO 22000:2018 Lead Auditor training in the world since 2005. We have unmatched experience in this field that has seen us deliver this training in over 15 countries around the world and to some of the largest organizations in the world including FSAI, Nestle, Kraft, General Mills, USDA, Primus, Silliker & on behalf of the World Bank/IFC."
+    courseUnique="We focus on consistent interpretation & application the requirements of FSSC 22000 V6.0 and ISO 22000:2018 and the ability to plan, conduct, report and follow up an audit of different OHSMS and EMS scenarios to provide Assurance the Health & Safety Management System meets the needs of the interested parties."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "USA",
+        date: "18th-22nd September (CDT), 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "11th-15th November (PST), 2023",
+        method: "Classroom (Fullerton, CA)",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Individuals interested in conducting second- or third-party audits of FSSC 22000 management systems",
+      "Quality/Food Safety Management Representatives",
+      "Food Safety Consultants",
+      "Food Production/Factory Managers",
+      "Enforcement Officers/Regulatory Inspectors",
+      "Microbiologists/Food Technologists/Veterinarians",
+      "HACCP/Food Safety Team Members",
+      "Line Supervisors",
+      "Certification Body/Registrar Auditors",
+    ]}
+    courseBasics={[
+      "This is a five-day (40-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m. (each day) with an earlier finish on the final day at 2 p.m.",
+      "Prior Learning Requirement: Learners are required to be familiar with ISO 45001:2018 Requirements or have completed a recognised OH&SMS Fundamentals course based on ISO 45001:2018 prior to registering for this course",
+    ]}
+    courseProg={fsmsProg}
+  />
+</Layout>

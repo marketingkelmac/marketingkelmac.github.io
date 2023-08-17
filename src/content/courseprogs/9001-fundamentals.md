@@ -3,75 +3,57 @@
 
 #### Course Introduction
 
-- Course Description & Objectives
-- Course Content Overview
-- Explaining the Course Structure
-- Explaining the Assessment Methodology Certification
+- Kelmac Group® Academy ProfileCourse Aims and Objectives, Overview and Structure
+- CQI-IRCA Introduction
+- Bibliography
+- Terms and Definitions
+- ISO in Brief including the benefits of Accredited Certification
 
-#### Introduction to QMS
+#### Information Security Management Systems
 
-- Purposes of a QMS
-- Benefits of a QMS
-- ISO 9000 Family of Standards
-- Scope of ISO 9001
-- Structure of ISO 9001
-- Terms & Definitions
-- Transition Challenges
+- Information Security Principles
+- Purpose, Aims, Scope and Benefits of ISO/IEC 27001:2022 and ISO/IEC 27002:2022
+- ISO/IEC 27001:2022 Key Concepts
+- Overview of ISO/IEC 27001:2022 The Standard
+- ISO/IEC 27001:2022 Documented Information
 
-#### Key Concepts of ISO 9001:2015
+#### Introduction to Auditing
 
-- Alignment with Strategic Direction
-- Risk-Based Thinking
-- Process Approach
-- Documented Information
-- Improvements, Innovation &
-- Competitiveness
+- Audit Terminology
+- Management System Audit Types
+- Principle of Auditing/CQI-IRCA Auditor
+- Code of Practice
+- Audit Program
+- Audit Life Cycle
+- Auditor Roles and Responsibilities
+- Auditor Competency and Behaviours
 
-#### Principles of Quality Management
+#### Initiation and Preparation
 
-- Quality Management Principles
-- Customer Focus
-- Leadership
-- People Engagement
-- Process Approach
-- Improvements
-- Evidence-Based Decision Making
-- Relationship Managements
+- Initiating the Audit
+- Preparing for the audit
+- Audit Life Cycle Working Documents
+- Audit Plan
+- Audit Checklist
 
-#### Context of the Organization
+#### Conducting the Audit
 
-- Context of the Organization
-- Interested Parties Requirements
-- Scope of the QMS
-- QMS and its Processes
-- Leadership & Planning
-- Leadership and Commitment
-- Quality Policy
+- Opening Meeting
+- Gathering Audit Evidence/Methods
+- Audit Sampling
+- Managing the Audit Team
+- Communications during the Audit
+- Auditee Reactions and how to handle
+- Overview of Audit findings
+- Simulated Audit
 
-#### Support
+#### Audit Reporting
 
-- Resources
-- Competence
-- Awareness
-- Communication
-- Documented Information
+- Audit Findings
+- Audit Report
+- Audit Conclusion Statement
 
-#### Operations
+#### Preparing for and Managing the Closing/Exit Meeting
 
-- Operational planning and control
-- Product/Service Requirements
-- Design and Development
-- External Providers
-- Production and service Provision
-- Product & Service Release/Control of Non-Conforming Outputs
-
-#### Performance and Improvements
-
-- Monitoring, Measurement, Analysis & Evaluation
-- Internal Audit Requirements
-- Management Review Requirements
-- Improvement Requirements
-
-#### Final Assessment
-
-- 50 MCQ Test
+- Final Audit Team Meeting
+- Preparing for the Closing/Exit Meeting Closing/Exit

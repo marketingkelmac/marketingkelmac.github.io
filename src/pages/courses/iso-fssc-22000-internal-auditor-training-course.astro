@@ -1,0 +1,68 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as fsmsProg from "../../content/courseprogs/22000-iac.md";
+---
+
+<Layout
+  title="FSSC 22000 v6.0 and ISO 22000:2018 Internal Auditor Training Course | CQI-IRCA Certified"
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      FSSC 22000 v6.0 and ISO 22000:2018 Internal Auditor Training Course |
+      CQI-IRCA Certified
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="fssc-cqi"
+    certifierID="2018"
+    courseDuration="2 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® Academy FSSC 22000 v6.0 and ISO 22000:2018 Internal Auditor course is on assisting and equipping the Learner in accelerating their career in QMS Auditing by providing the Learner with a training qualification that enables them conduct a robust and effective audit process, activity or department/function based upon the requirements of FSSC 22000 v6.0 and ISO 22000:2018 and in accordance with the requirements of FSSC 22000 v6.0 and ISO 22000:2018."
+    courseUnique="Provide Internal Auditors with both the confidence and ability to apply the audit assurance tools and techniques, methodology and desired behaviours to assess the organization’s FSMS processes and process controls to consistently deliver safe food across the food chain, meeting interested party and applicable statutory and regulatory Requirements."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "USA",
+        date: "22nd-24th August (CDT), 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "26th-28th October (EST), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "5th-7th December (PST), 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Individuals interested in conducting 1st party (Internal) audits of Food Safety Management Systems",
+      "Quality/Food Safety Management Representatives",
+      "Food Safety Consultants",
+      "Food Production/Factory Managers",
+      "Enforcement Officers/Regulatory Inspectors",
+      "Microbiologists/Food Technologists/Veterinarians",
+      "HACCP/Food Safety Team Members",
+      "Line Supervisors",
+      "Anyone who may be involved in either the support or actual implementation of a food safety management system or HACCP-based system",
+      "Individuals who want to become a CQI and IRCA Provisional Auditor or Internal Auditor",
+    ]}
+    courseBasics={[
+      "This is a five-day (14-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m. (each day) with an earlier finish on the final day at 2 p.m.",
+      "Prior Learning Requirement: Learners are required to be familiar with FSSC 22000 V5.1 and ISO 22000:2018 Requirements or have FSSC 22000 V5.1 and ISO 22000:2018 Fundamental training in advance of attending this course",
+    ]}
+    courseProg={fsmsProg}
+  />
+</Layout>

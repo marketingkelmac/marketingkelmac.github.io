@@ -1,0 +1,43 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Container from "../../components/Container.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as fsmsProg from "../../content/courseprogs/22000-fundamentals.md";
+---
+
+<Layout title="FSSC 22000 v6.0 and ISO 22000:2018 Fundamentals Training Course">
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      FSSC 22000 v6.0 and ISO 22000:2018 Fundamentals Training Course
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="kelmac"
+    certifierID={null}
+    courseDuration="1 day"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of our ISO 22000:2018 FSSC 22000 Fundamentals Training Course is to comprehensively introduce Learners to Food Safety Management Systems and provide them with a highly insightful introduction to the purpose, intent and requirements of ISO 22000:2018 FSSC 22000 plus the business case for adopting ISO 22000:2018 FSSC 22000. Kelmac Group® Academy is a licensed training provider, recognized by the Foundation for Food Safety Certification (FFSC)."
+    courseUnique="Our training demonstrates to the Learner the benefits of adopting the unique Kelmac Group® Academy One System Model for enhancing organizational compliance, effectiveness and efficiency based on utilizing Business Process Management to enhance ISO."
+  />
+
+  <CourseSchedule regionSchedule={null} />
+  <CourseAdditional
+    whoCanAttend={[
+      "Managers planning the registration to ISO 22000",
+      "Anyone who may be involved in either the support or actual implementation of a food safety management system or HACCP-based system",
+      "Managers or other personnel tasked with managing a food safety management system",
+      "Food safety consultants",
+    ]}
+    courseBasics={[
+      "This is a 1-day (7-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m.",
+      "Ideal for those looking to get started & understand the requirements of Food Safety Management Systems & ISO/FSSC 22000.",
+      "This course is recognized by the Foundation for Food Safety Certification (FSSC).",
+    ]}
+    courseProg={fsmsProg}
+  />
+</Layout>

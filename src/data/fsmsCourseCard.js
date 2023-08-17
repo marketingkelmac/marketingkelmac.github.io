@@ -7,6 +7,7 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "fssc",
     cqiID: null,
+    url: "iso-fssc-22000-fundamentals-training-course",
   },
   {
     name: "Kelmac Group® Academy FSSC 22000 v6.0 and ISO 22000:2018 Internal Auditor Training Course",
@@ -16,6 +17,7 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "fssc",
     cqiID: null,
+    url: "iso-fssc-22000-internal-auditor-training-course",
   },
 
   {
@@ -26,5 +28,6 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "fssc",
     cqiID: null,
+    url: "iso-fssc-22000-lead-auditor-training-course",
   },
 ];

@@ -1,0 +1,43 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Container from "../../components/Container.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as ismsProg from "../../content/courseprogs/27001-fundamentals.md";
+---
+
+<Layout title="ISMS Fundamentals based on ISO/IEC 27001:2022 Training Course">
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      ISMS Fundamentals based on ISO/IEC 27001:2022 Training Course
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="kelmac"
+    certifierID={null}
+    courseDuration="1 day"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® ISMS Fundamentals based on ISO/IEC 27001:2022 is to comprehensively introduce Learners to Information Security Management Systems and provide them with a highly insightful introduction to the purpose, intent and requirements of ISO/IEC 27001:2022 plus the business case for adopting ISO/IEC 27001:2022."
+    courseUnique="We focus on consistent interpretation & application the requirements of ISO/IEC 27001:2022 and the ability to plan, conduct, report and follow up an audit of different ISMS scenarios to provide Information Security Management System meets the needs of the interested parties."
+  />
+
+  <CourseSchedule regionSchedule={null} />
+  <CourseAdditional
+    whoCanAttend={[
+      "Quality professionals/consultants",
+      "Presidents/Vice Presidents/CEOs",
+      "ISO Coordinators/management representatives",
+      "Engineers",
+      "Supervisors",
+    ]}
+    courseBasics={[
+      "This is a one-day (7-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m. ",
+      "Prior Learning Requirement: Learners are required to be  familiar with ISO/IEC 27001:2022 Requirements or have received ISO/IEC 27001 Fundamentals training in advance of attending this course",
+    ]}
+    courseProg={ismsProg}
+  />
+</Layout>

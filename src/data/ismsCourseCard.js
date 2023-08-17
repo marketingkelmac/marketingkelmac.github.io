@@ -1,12 +1,13 @@
 export default [
   {
-    name: "ISMS ISO/IEC 27001:2022 Fundamentals Training Course",
+    name: "ISMS Fundamentals based on ISO/IEC 27001:2022 Training Course",
     description:
       "The focus of the Kelmac Group® ISMS Fundamentals based on ISO/IEC 27001:2022 is to comprehensively introduce Learners to Information Security Management Systems and provide them with a highly insightful introduction to the purpose, intent and requirements of ISO/IEC 27001:2022 plus the business case for adopting ISO/IEC 27001:2022",
     duration: "1 day",
     deliveryMethods: "Virtual, Classroom",
     certifier: "kelmac",
     cqiID: null,
+    url: "iso-27001-fundamentals-training-course",
   },
   {
     name: "ISMS ISO/IEC 27001:2022 Internal Auditor Training Course | CQI IRCA Certified",
@@ -16,6 +17,7 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
     cqiID: "2472",
+    url: "iso-27001-internal-auditor-training-course",
   },
 
   {
@@ -26,5 +28,6 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
     cqiID: "2471",
+    url: "iso-27001-lead-auditor-training-course",
   },
 ];
