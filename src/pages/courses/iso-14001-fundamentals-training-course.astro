@@ -1,0 +1,66 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as emsProg from "../../content/courseprogs/14001-fundamentals.md";
+---
+
+<Layout title="EMS Fundamentals based on ISO 14001:2015 Training Course">
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      EMS Fundamentals based on ISO 14001:2015 Training Course
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="kelmac"
+    certifierID={null}
+    courseDuration="1 day"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® Academy EMS Fundamentals based on ISO 14001:2015 is to comprehensively introduce Learners to Environmental Management Systems and provide them with a highly insightful introduction to the purpose, intent and requirements of ISO 14001 plus the business case for adopting ISO 14001."
+    courseUnique="Our training demonstrates to the Learner the benefits of adopting the unique Kelmac Group® Academy One System Model for enhancing organizational compliance, effectiveness and efficiency based on utilizing Business Process Management to enhance ISO."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "12th September, 2023",
+        method: "Virtual",
+      },
+
+      {
+        region: "Ireland",
+        date: "21st November, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "12th September, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "7th November, 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Quality professionals/consultants",
+      "Presidents/Vice Presidents/CEOs",
+      "ISO Coordinators/management representatives",
+      "Engineers",
+      "Supervisors",
+    ]}
+    courseBasics={[
+      "This is a one-day (7hr) learning event.",
+      "Start/Finish Times: 9 a.m. – 5 p.m.",
+      "Ideal for those looking to get started & understand the requirements of Environmental Management Systems and ISO 14001:2015.",
+    ]}
+    courseProg={emsProg}
+  />
+</Layout>
