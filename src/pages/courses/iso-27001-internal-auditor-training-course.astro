@@ -1,0 +1,69 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as qmsProg from "../../content/courseprogs/9001-iac.md";
+---
+
+<Layout
+  title="Kelmac Group Academy and CQI-IRCA Certified ISO/IEC 27001:2022 Internal Auditor Training Course"
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      Kelmac Group Academy and CQI-IRCA Certified ISO/IEC 27001:2022 Internal
+      Auditor Training Course
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="cqi"
+    certifierID="2472"
+    courseDuration="2 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® Academy ISO/IEC 27001:2022 Internal Auditor Learning Course is on assisting and verifying the competencies & capabilities of the Learner to be able to effectively audit a process, activity or department/function of an ISMS based on ISO/IEC 27001:2022 requirements with specific emphasis of 1st Party auditing [Internal audits]."
+    courseUnique="Provides Internal Auditors with both the confidence and ability to apply the audit assurance tools & techniques, methodology and desired behaviours to assess the organization’s ISMS processes & process controls to consistently preserve the confidentiality, integrity and availability of the organization’s information assets and give confidence to interested parties that risks are adequately managed."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "12th-14th September, 2023",
+        method: "Virtual",
+      },
+
+      {
+        region: "Ireland",
+        date: "14th-16th November, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "14th-15th September (CDT), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "14th-15th November (PST), 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Quality professionals/consultants",
+      "Presidents/Vice Presidents/CEOs",
+      "ISO Coordinators/management representatives",
+      "Engineers",
+      "Supervisors",
+    ]}
+    courseBasics={[
+      "This is a two-day (14-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m. (each day) ",
+      "Prior Learning Requirement: Learners are required to be familiar with ISO/IEC 27001:2022 Requirements or have received ISO/IEC 27001 Fundamentals training in advance of attending this course",
+    ]}
+    courseProg={qmsProg}
+  />
+</Layout>

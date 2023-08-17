@@ -10,7 +10,7 @@ export default [
     url: "iso-27001-fundamentals-training-course",
   },
   {
-    name: "ISMS ISO/IEC 27001:2022 Internal Auditor Training Course | CQI IRCA Certified",
+    name: "Kelmac Group Academy and CQI-IRCA Certified ISO/IEC 27001:2022 Internal Auditor Training Course",
     description:
       "The focus of the Kelmac Group® Academy ISO/IEC 27001:2022 Internal Auditor Learning Course is on assisting and verifying the competencies & capabilities of the Learner to be able to effectively audit a process, activity or department/function of an ISMS based on ISO/IEC 27001:2022 requirements with specific emphasis of 1st Party auditing [Internal audits].",
     duration: "2 days",

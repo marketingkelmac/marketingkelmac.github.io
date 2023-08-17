@@ -1,0 +1,79 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as ismsProg from "../../content/courseprogs/27001-lac.md";
+---
+
+<Layout
+  title="CQI-IRCA Certified ISO/IEC 27001:2022 Auditor/Lead Auditor Course"
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      CQI-IRCA Certified ISO/IEC 27001:2022 Auditor/Lead Auditor Course
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="cqi"
+    certifierID="2471"
+    courseDuration="5 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="Our CQI-IRCA Certified QMS ISO 9001:2015 Lead Auditor training teaches  Learners the principles, processes, and techniques used for the assessment of and management of Environmental aspects and impacts, Occupational hazards, risks and controls; and, their significance for ISO and QMS lead auditorsOur ISO 27001:2022 Lead Auditor training teaches Learners the principles, processes, and techniques used for the assessment of and management of Information Security Management System and their significance of ISMS lead auditors."
+    courseUnique="With 50% more skill based exercises compared to our competitors. We focus on auditing that provides Assurance that the Quality Management System meets the needs of the interested parties & our Learners are equipped to make higher quality insights for improved organizational performance.  Learners practice using audit tools and techniques they can uses immediately and that inspire's Learner confidence."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "21st-25th August, 2023",
+        method: "Virtual",
+      },
+
+      {
+        region: "Ireland",
+        date: "9th-13th 3rd October, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "11th-15th December, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "28th August-1st September (PDT), 2023",
+        method: "Classroom (San Fransisco, CA)",
+      },
+      {
+        region: "USA",
+        date: "9th-13th October (CDT), 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "11th-15th December (PST), 2023",
+        method: "Classroom (San Fransisco, CA)",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Quality Managers",
+
+      "Document Controllers ",
+      "Internal Auditors",
+      "Owner Managers ",
+      "Implementation Members",
+    ]}
+    courseBasics={[
+      "This is a five-day (45-hour) learning event.",
+      "Start/Finish Times: 8 a.m. – 5 p.m. (each day) with an earlier finish on the final day at 2 p.m.",
+      "Prior Learning Requirement: Learners are required to be familiar with ISO/IEC 27001:2022 Requirements or have completed a recognised ISMS Fundamentals course based on ISO/IEC 27001:2022 prior to registering for this ",
+    ]}
+    courseProg={ismsProg}
+  />
+</Layout>

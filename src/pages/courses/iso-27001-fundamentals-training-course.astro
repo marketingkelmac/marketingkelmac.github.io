@@ -1,6 +1,5 @@
 ---
 import ContainerBG from "../../components/ContainerBG.astro";
-import Container from "../../components/Container.astro";
 import Layout from "../../layouts/Layout.astro";
 import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
 import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
@@ -24,7 +23,45 @@ import * as ismsProg from "../../content/courseprogs/27001-fundamentals.md";
     courseUnique="We focus on consistent interpretation & application the requirements of ISO/IEC 27001:2022 and the ability to plan, conduct, report and follow up an audit of different ISMS scenarios to provide Information Security Management System meets the needs of the interested parties."
   />
 
-  <CourseSchedule regionSchedule={null} />
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "12th September, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "11th October, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "14th November, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "Ireland",
+        date: "14th December, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "13th September (CDT), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "10th October (EDT), 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "13th November (PST), 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
   <CourseAdditional
     whoCanAttend={[
       "Quality professionals/consultants",
