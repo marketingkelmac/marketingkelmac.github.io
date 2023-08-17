@@ -1,0 +1,68 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as prog from "../../content/courseprogs/45001-lac.md";
+---
+
+<Layout
+  title="CQI-IRCA Certified OHSMS Internal Auditor Course based on ISO 45001:2018"
+>
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      CQI-IRCA Certified OHSMS Internal Auditor Course based on ISO 45001:2018
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="cqi"
+    certifierID="2297"
+    courseDuration="5 days"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® ISO 45001:2018 Internal Auditor Classroom Learning Course is an assisting and verifying the competencies and capabilities of the Learner to be able to effectively audit a process, activity or department/functions of OH&SMS based on ISO 45001:2018 requirements with specific emphasis of 1st party auditing [Internal Audits]."
+    courseUnique="Provide Internal Auditors with both the confidence and ability to apply the audit assurance tools and techniques, methodology and desired behaviours to assess the organization’s OH&SMS processes and process controls to consistently deliver Occupational Health and Safety Management System performance results that meet interested party and applicable statutory and regulatory requirements."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "19th-20th September, 2023",
+        method: "Classroom",
+      },
+
+      {
+        region: "Ireland",
+        date: "22nd-23rd November, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "19th-20th September (CDT), 2023",
+        method: "Classroom",
+      },
+      {
+        region: "USA",
+        date: "22nd-23rd November (CDT), 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Individuals interested in conducting second- or third-party audits of OHSMS management systems",
+      "Occupational Health and Safety Management Representatives",
+      "Health and Safety Consultants",
+      "Quality Directors",
+      "Health and Safety Managers",
+    ]}
+    courseBasics={[
+      "This is a two-day (14-hour) learning event.",
+      "Start/Finish Times: 9 a.m. – 5 p.m. (each day)",
+      "Prior Learning Requirement: Learners are required to be familiar with ISO 45001:2018 Requirements or have received ISO 45001:2018 Fundamentals Training in advance of attending this course",
+    ]}
+    courseProg={prog}
+  />
+</Layout>

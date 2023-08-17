@@ -1,0 +1,66 @@
+---
+import ContainerBG from "../../components/ContainerBG.astro";
+import Layout from "../../layouts/Layout.astro";
+import CourseIntro from "../../components/coursedetails/CourseIntro.astro";
+import CourseSchedule from "../../components/coursedetails/CourseSchedule.astro";
+import CourseAdditional from "../../components/coursedetails/CourseAdditional.astro";
+import * as prog from "../../content/courseprogs/45001-fundamentals.md";
+---
+
+<Layout title="OHSMS Fundamentals Training Course based on ISO 45001:2018">
+  <ContainerBG isDark classes="hero-small" background="city.png">
+    <h1 class="h1-lg">
+      OHSMS Fundamentals Training Course based on ISO 45001:2018
+    </h1>
+  </ContainerBG>
+
+  <CourseIntro
+    certifier="kelmac"
+    certifierID={null}
+    courseDuration="1 day"
+    courseMethods="Virtual, Classroom"
+    courseFor="The focus of the Kelmac Group® OH&SMS Fundamentals based on ISO 45001:2018 is to comprehensively introduce Learners to Occupational Health & Safety Management Systems and provide them with a highly insightful introduction to the purpose, intent and requirements of ISO 45001:2018 plus the business case for adopting ISO 45001:2018."
+    courseUnique="We focus on consistent interpretation & application the requirements of ISO 45001:2018 and the ability to plan, conduct, report and follow up an audit of a different Health & Safety Management System scenarios to provide Assurance the Health & Safety Management System meets the needs of the interested parties."
+  />
+
+  <CourseSchedule
+    regionSchedule={[
+      {
+        region: "Ireland",
+        date: "18th September, 2023",
+        method: "Virtual",
+      },
+
+      {
+        region: "Ireland",
+        date: "21st November, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "18th September, 2023",
+        method: "Virtual",
+      },
+      {
+        region: "USA",
+        date: "21st November, 2023",
+        method: "Virtual",
+      },
+    ]}
+  />
+  <CourseAdditional
+    whoCanAttend={[
+      "Health and Safety Managers",
+      "Management",
+      "Consultants",
+      "Environmental or Quality Managers interested in implementing an OHSMS",
+      "Individuals recently tasked with implementing an OHSMS",
+    ]}
+    courseBasics={[
+      "This is a one-day (7-hour) learning event.",
+      "Start/Finish Times: 9 a.m. – 5 p.m.",
+      "Ideal for those looking to get started & understand the requirements of Occupational Health & Safety Management Systems and ISO 45001:2018.",
+    ]}
+    courseProg={prog}
+  />
+</Layout>
