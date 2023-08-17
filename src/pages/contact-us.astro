@@ -8,12 +8,43 @@ import CountryOptions from "../components/CountryOptions.astro";
   <Container>
     <div class="contact-container">
       <div class="left">
-        <img src="./contact.jpg" alt="" />
         <p>
           Looking for more information on our training and other services?
           Submit your information and a Kelmac Group® representative will get in
           touch with you as soon as possible.
+          <span
+            >Email: <a href="mailto:info@kelmacgroup.com"
+              >info@kelmacgroup.com</a
+            ></span
+          >
         </p>
+        <h2 class="h3">Our Offices</h2>
+        <div class="grid">
+          <div>
+            <h3 class="h4">Ireland</h3>
+            <p>
+              Kelmac Group® Limited Old Windmill Office Suites, Lower Gerald
+              Griffin Street, Limerick, V94 YRD7 <span>Ph. (061) 491224</span>
+            </p>
+          </div>
+          <div>
+            <h3 class="h4">United States</h3>
+
+            <p>
+              Kelmac I Group, Inc 875 N. Michigan Ave. Suite 3100 Chicago, IL
+              60611
+              <span>Ph. (312) 496 6607</span>
+            </p>
+          </div>
+          <div>
+            <h3 class="h4">United Kingdom</h3>
+
+            <p>
+              Kelmac (UK) Limited, Spaces Covent Garden, 60 St Martins Lane,
+              London, WC2N 4JS <span>Ph. (0203) 432 4189</span>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="right">
         <h1 class="h1">Get in touch with us</h1>
@@ -56,6 +87,12 @@ import CountryOptions from "../components/CountryOptions.astro";
     grid-template-columns: 2fr 3fr;
     place-items: center;
     gap: 2rem;
+  }
+
+  span {
+    display: block;
+    color: var(--blue-700);
+    font-weight: 700;
   }
 
   .left {

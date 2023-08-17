@@ -21,7 +21,7 @@ export default [
   },
 
   {
-    name: "ISMS ISO/IEC 27001:2022 Lead Auditor Training Course | CQI IRCA Certified",
+    name: "CQI-IRCA Certified ISO/IEC 27001:2022 Auditor/Lead Auditor Course",
     description:
       "Our ISO 27001:2022 Lead Auditor training teaches Learners the principles, processes, and techniques used for the assessment of and management of Information Security Management System and their significance of ISMS lead auditors.",
     duration: "5 days",
