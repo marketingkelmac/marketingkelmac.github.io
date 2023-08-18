@@ -6,16 +6,18 @@ import { formatDate } from "../js/utils";
 ---
 
 <article>
-  <img src={`/assets/blogimages/${image.src}`} alt={image.alt} />
+  <a href={url}
+    ><img src={`/assets/blogimages/${image.src}`} alt={image.alt} /></a
+  >
   <div class="tags">
     <a href={`/category/${category}`}>{category}</a>
     {standard && <a href={`/standard/${standard}`}>{standard}</a>}
   </div>
   <hr />
+
   <div>
     <p class="eyebrow">Posted on {formatDate(date)}</p>
     <p class="eyebrow mb">By <a href={`/author/${author}`}>{author}</a></p>
-
     <hr />
     <a href={url}>
       <h2 class="title">
@@ -27,7 +29,6 @@ import { formatDate } from "../js/utils";
     </p>
   </div>
   <hr />
-
   <a class="main-link" href={url}
     ><span>Read Article</span><svg
       class="arrow"
@@ -49,6 +50,7 @@ import { formatDate } from "../js/utils";
     color: var(--blue-700);
     background-color: var(--neutral-100);
     box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
+    flex-shrink: 0;
   }
 
   article img {
@@ -107,7 +109,6 @@ import { formatDate } from "../js/utils";
   }
 
   a.main-link {
-    margin-top: au;
     display: flex;
     align-items: center;
     padding: 1.5rem 2rem;

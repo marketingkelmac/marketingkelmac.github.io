@@ -7,7 +7,7 @@ export default [
     deliveryMethods: "Virtual, Classroom",
     certifier: "kelmac",
     cqiID: null,
-    url: "13485-fundamentals",
+    url: "iso-13485-fundamentals-training-course",
   },
   {
     name: "MDQMS ISO 13485:2016 Internal Auditor Training Course ",
@@ -15,19 +15,19 @@ export default [
       "The focus of the Kelmac Group® ISO 13485:2016 Internal Auditor Training Course is on assisting and verifying the competencies/capabilities of the Learner to be able to effectively audit a product, process or department/function of a QMS based on ISO 13485:2016 requirements with specific emphasis of 1st Party auditing [Internal audits]. ",
     duration: "2 days",
     deliveryMethods: "Virtual, Classroom",
-    certifier: "cqi",
-    cqiID: "2297",
-    url: "13485-iac",
+    certifier: "kelmac",
+    cqiID: null,
+    url: "iso-13485-internal-auditor-training-course",
   },
 
   {
-    name: "MDQMS ISO 13485:2016 Lead Auditor Training Course | CQI-IRCA Certified",
+    name: "CQI-IRCA Certified QMS Auditor/Lead Auditor Training Course based on ISO 13485:2016",
     description:
       "The focus of the VIRTUAL [VILT] Kelmac Group® ISO 13485:2016 Lead Auditor Training Course is on assisting and verifying the competencies/capabilities of the Learner to be able to effectively audit a product, process or department/function of a QMS based on ISO 13485:2016 requirements with specific emphasis of 2nd and 3rd party auditing [External audits].",
     duration: "5 days",
     deliveryMethods: "Virtual, Classroom",
     certifier: "cqi",
-    cqiID: "2295",
-    url: "13485-lac",
+    cqiID: "17584",
+    url: "iso-13485-lead-auditor-training-course",
   },
 ];
