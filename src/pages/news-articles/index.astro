@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/Container.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
 import { formatArticles } from "../../js/utils";
+import ContainerBG from "../../components/ContainerBG.astro";
 
 const allPosts = await Astro.glob("./*.mdx");
 
@@ -12,10 +13,10 @@ console.log(formattedArticles);
 ---
 
 <Layout title="Kelmac Group® | News and Articles">
-  <Container classes="hero">
+  <ContainerBG classes="hero-small" isDark background="city.png">
     <h1 class="h1">News and Articles from the Kelmac Group®</h1>
-  </Container>
-  <Container isDark>
+  </ContainerBG>
+  <Container>
     <div class="card-container">
       {
         formattedArticles.map((post) => {
@@ -29,6 +30,7 @@ console.log(formattedArticles);
               url={post.url}
               image={post.frontmatter.image}
               date={post.frontmatter.date}
+              author={post.frontmatter.author}
             />
           );
         })

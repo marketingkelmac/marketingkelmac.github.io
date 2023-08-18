@@ -1,5 +1,5 @@
 ---
-const { title, description, date, image, url, standard, category } =
+const { title, description, date, image, url, standard, category, author } =
   Astro.props;
 
 import { formatDate } from "../js/utils";
@@ -7,21 +7,27 @@ import { formatDate } from "../js/utils";
 
 <article>
   <img src={`/assets/blogimages/${image.src}`} alt={image.alt} />
+  <div class="tags">
+    <a href={`/category/${category}`}>{category}</a>
+    {standard && <a href={`/standard/${standard}`}>{standard}</a>}
+  </div>
+  <hr />
   <div>
     <p class="eyebrow">Posted on {formatDate(date)}</p>
-    <h2 class="title">
-      {title}
-    </h2>
+    <p class="eyebrow mb">By <a href={`/author/${author}`}>{author}</a></p>
+
+    <hr />
+    <a href={url}>
+      <h2 class="title">
+        {title}
+      </h2>
+    </a>
     <p class="desc">
       {description}
     </p>
-    <hr />
-    <div class="tags">
-      <span>{category}</span>
-      {standard && <span>{standard}</span>}
-    </div>
-    <hr />
   </div>
+  <hr />
+
   <a class="main-link" href={url}
     ><span>Read Article</span><svg
       class="arrow"
@@ -62,30 +68,46 @@ import { formatDate } from "../js/utils";
     margin-bottom: 0.25em;
   }
 
+  .eyebrow a {
+    text-decoration: underline 1.5px;
+    text-underline-offset: 2px;
+  }
+
   .desc {
     color: var(--neutral-400);
   }
 
   h2.title {
     color: var(--blue-700);
+    margin-top: 2rem;
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     gap: 1rem;
     padding: 0.5rem;
     width: 100%;
   }
 
-  .tags span {
+  .tags a {
+    display: block;
     width: fit-content;
     background-color: var(--blue-400);
     padding: 0.2em 0.75em;
     font-size: 0.85rem;
+    color: var(--neutral-100);
+    transition: all 250ms ease-in-out;
+  }
+
+  .tags a:hover {
+    background-color: var(--blue-700);
   }
 
   a.main-link {
+    margin-top: au;
     display: flex;
     align-items: center;
     padding: 1.5rem 2rem;
@@ -102,5 +124,9 @@ import { formatDate } from "../js/utils";
   }
   a.main-link:hover .arrow {
     transform: translateX(150px);
+  }
+
+  .mb {
+    margin-bottom: 1rem;
   }
 </style>
