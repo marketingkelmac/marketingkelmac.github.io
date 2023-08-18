@@ -2,29 +2,39 @@
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/Container.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
+import { formatArticles } from "../../js/utils";
 
 const allPosts = await Astro.glob("./*.mdx");
-const { frontmatter } = Astro.props;
+
+const formattedArticles = formatArticles(allPosts);
+console.log("here");
+console.log(formattedArticles);
 ---
 
 <Layout title="Kelmac Group® | News and Articles">
   <Container classes="hero">
     <h1 class="h1">News and Articles from the Kelmac Group®</h1>
   </Container>
-  <!-- <Container isDark>
+  <Container isDark>
     <div class="card-container">
       {
-        allPosts.forEach((post) => {
+        formattedArticles.map((post) => {
+          console.log(post.frontmatter);
           return (
             <ArticleCard
               title={post.frontmatter.title}
               description={post.frontmatter.description}
+              category={post.frontmatter.category}
+              standard={post.frontmatter.standard}
+              url={post.url}
+              image={post.frontmatter.image}
+              date={post.frontmatter.date}
             />
           );
         })
       }
     </div>
-  </Container> -->
+  </Container>
 </Layout>
 
 <style>

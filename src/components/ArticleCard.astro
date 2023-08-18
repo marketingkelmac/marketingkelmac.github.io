@@ -16,7 +16,10 @@ import { formatDate } from "../js/utils";
       {description}
     </p>
     <hr />
-    <div class="tags"><span>{category}</span> <span>{standard}</span></div>
+    <div class="tags">
+      <span>{category}</span>
+      {standard && <span>{standard}</span>}
+    </div>
     <hr />
   </div>
   <a class="main-link" href={url}

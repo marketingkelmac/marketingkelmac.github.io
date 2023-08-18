@@ -19,10 +19,10 @@ export default [
     name: "Auditing",
     pathname: "/auditing",
   },
-  // {
-  //   name: "News & Articles",
-  //   pathname: "/news-articles",
-  // },
+  {
+    name: "News & Articles",
+    pathname: "/news-articles",
+  },
   {
     name: "Contact us",
     pathname: "/contact-us",
