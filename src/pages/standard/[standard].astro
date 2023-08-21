@@ -1,23 +1,47 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ContainerBG from "../../components/ContainerBG.astro";
 import Container from "../../components/Container.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
-import { formatArticles } from "../../js/utils";
-import ContainerBG from "../../components/ContainerBG.astro";
 
-const allPosts = await Astro.glob("./*.mdx");
+import { slugify, formatArticles } from "../../js/utils";
 
-const formattedArticles = formatArticles(allPosts);
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../news-articles/*.mdx");
+  const formattedArticles = formatArticles(allPosts);
+
+  const allStandards = [
+    ...new Set(
+      formattedArticles.map((article) => article.frontmatter.standard).flat()
+    ),
+  ];
+
+  return allStandards.map((standard) => {
+    const standardPosts = formattedArticles.filter(
+      (article) => article.frontmatter.standard === standard
+    );
+
+    return {
+      params: { standard: slugify(standard) },
+      props: {
+        standardName: standard,
+        posts: standardPosts,
+      },
+    };
+  });
+}
+const { standard } = Astro.params;
+const { posts, standardName } = Astro.props;
 ---
 
 <Layout title="Kelmac Group® | News and Articles">
   <ContainerBG classes="hero-small" isDark background="city.png">
-    <h1 class="h1">News and Articles from the Kelmac Group®</h1>
+    <h1 class="h1">Articles on {standardName}</h1>
   </ContainerBG>
   <Container>
     <div class="card-container">
       {
-        formattedArticles.map((post) => {
+        posts.map((post) => {
           return (
             <ArticleCard
               title={post.frontmatter.title}

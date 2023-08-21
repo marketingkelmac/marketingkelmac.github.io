@@ -2,7 +2,7 @@
 const { title, description, date, image, url, standard, category, author } =
   Astro.props;
 
-import { formatDate } from "../js/utils";
+import { formatDate, slugify } from "../js/utils";
 ---
 
 <article>
@@ -10,14 +10,16 @@ import { formatDate } from "../js/utils";
     ><img src={`/assets/blogimages/${image.src}`} alt={image.alt} /></a
   >
   <div class="tags">
-    <a href={`/category/${category}`}>{category}</a>
-    {standard && <a href={`/standard/${standard}`}>{standard}</a>}
+    <a href={`/category/${slugify(category)}`}>{category}</a>
+    {standard && <a href={`/standard/${slugify(standard)}`}>{standard}</a>}
   </div>
   <hr />
 
   <div>
     <p class="eyebrow">Posted on {formatDate(date)}</p>
-    <p class="eyebrow mb">By <a href={`/author/${author}`}>{author}</a></p>
+    <p class="eyebrow mb">
+      By <a href={`/author/${slugify(author)}`}>{author}</a>
+    </p>
     <hr />
     <a href={url}>
       <h2 class="title">

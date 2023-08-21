@@ -1,23 +1,51 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ContainerBG from "../../components/ContainerBG.astro";
 import Container from "../../components/Container.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
-import { formatArticles } from "../../js/utils";
-import ContainerBG from "../../components/ContainerBG.astro";
 
-const allPosts = await Astro.glob("./*.mdx");
+import { slugify, formatArticles } from "../../js/utils";
 
+export async function getStaticPaths() {
+  return [
+    {
+      params: { category: slugify("Article") },
+      props: { name: "Article" },
+    },
+    {
+      params: { category: slugify("Update") },
+      props: { name: "Update" },
+    },
+    {
+      params: { category: slugify("News") },
+      props: { name: "News" },
+    },
+    {
+      params: { category: slugify("Insights") },
+      props: { name: "Insights" },
+    },
+  ];
+}
+
+const { category } = Astro.params;
+const { name } = Astro.props;
+
+const allPosts = await Astro.glob("../news-articles/*.mdx");
 const formattedArticles = formatArticles(allPosts);
+
+const catArticles = formattedArticles.filter(
+  (article) => slugify(article.frontmatter.category) === category
+);
 ---
 
 <Layout title="Kelmac Group® | News and Articles">
   <ContainerBG classes="hero-small" isDark background="city.png">
-    <h1 class="h1">News and Articles from the Kelmac Group®</h1>
+    <h1 class="h1">Posts under the category of {name}</h1>
   </ContainerBG>
   <Container>
     <div class="card-container">
       {
-        formattedArticles.map((post) => {
+        catArticles.map((post) => {
           return (
             <ArticleCard
               title={post.frontmatter.title}
