@@ -8,7 +8,7 @@ const { title, description, date, image, category, standard, author } =
   frontmatter;
 ---
 
-<Layout {title} {description}>
+<Layout {title} {description} img={`./assets/blogimages/${image.src}`}>
   <header>
     <div class="container">
       <img src=`/assets/blogimages/${image.src}` alt={image.alt} />

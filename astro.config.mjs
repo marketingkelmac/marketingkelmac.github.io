@@ -1,14 +1,16 @@
 import { defineConfig, sharpImageService } from "astro/config";
 import mdx from "@astrojs/mdx";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://marketingkelmac.github.io",
+  site: "https://kelmacgroup.com",
   experimental: {
-    assets: true
+    assets: true,
   },
   image: {
-    service: sharpImageService()
+    service: sharpImageService(),
   },
-  integrations: [mdx()]
+  integrations: [mdx(), sitemap()],
 });
